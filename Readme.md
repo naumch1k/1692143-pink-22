@@ -1,4 +1,4 @@
-# Личный проект «Пинк» 
+# Личный проект «Пинк»
 
 * Студент: [Наумчик Ирина](https://up.htmlacademy.ru/adaptive/22/user/1692143).
 * Наставник: [Руслан Бреев](https://htmlacademy.ru/profile/blckwltz).
