@@ -1,12 +1,276 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
   </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
-
+  <body class="page__body">
+    <header class="header">
+      <a class="logo logo_place_header">
+        <img src="./img/header-logo-mobile.svg" width="74" height="23" alt="Логотип приложения Pink">
+      </a>
+      <nav class="navigation">
+        <button class="navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="navigation__container">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link">Главная</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="photo.html">Фотографии</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Приложение "Пинк"</h1>
+      <section class="intro">
+        <div class="intro__container">
+          <h2 class="visually-hidden">Скачать приложение</h2>
+          <p class="intro__slogan">Вгляните на жизнь иначе!</p>
+          <a class="intro__button button" href="https://www.apple.com/ru/itunes/" target="_blank">Скачать приложение</a>
+          <ul class="intro__list">
+            <li>
+              <a class="intro__item" href="https://www.apple.com/ru/itunes/" target="_blank">
+                <span class="visually-hidden">App Store</span>
+                <svg aria-hidden="true" focusable="false" width="47" height="56" fill="none"><path d="M39.245 29.74a12.09 12.09 0 002.127 6.787A12.668 12.668 0 0047 41.063a29.794 29.794 0 01-4 7.96c-2.401 3.413-4.905 6.816-8.844 6.904-3.938.09-5.088-2.219-9.526-2.219-4.437 0-5.8 2.15-9.465 2.288-3.663.139-6.686-3.718-9.088-7.111-4.956-6.905-8.752-19.639-3.664-28.2a13.925 13.925 0 015.024-5.037 14.489 14.489 0 016.935-1.977c3.724-.069 7.246 2.427 9.526 2.427 2.28 0 6.564-3.009 11.062-2.565 2.084.073 4.121.613 5.954 1.576a13.387 13.387 0 014.61 3.977c-.275.168-6.31 3.571-6.249 10.653h-.03zM31.978 8.936C34.16 6.46 35.238 3.247 34.981 0c-3.305.302-6.364 1.82-8.55 4.241-1.862 2.092-3.5 5.445-3.053 8.66 3.247.247 6.555-1.597 8.57-3.945" fill="#fff"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="intro__item" href="https://play.google.com/store" target="_blank">
+                <span class="visually-hidden">Android Play Store</span>
+                <svg aria-hidden="true" focusable="false" width="43" height="47" fill="none"><path d="M34.886 14.062H8.114v19.133c-.011.913.332 1.795.96 2.468a3.697 3.697 0 002.422 1.159v7.453c.044.737.374 1.43.922 1.936a2.986 2.986 0 002.026.789c.753 0 1.478-.282 2.026-.789.548-.506.878-1.199.922-1.936v-7.433h8.236v7.433c.045.737.375 1.43.922 1.936a2.985 2.985 0 002.026.789c.754 0 1.478-.282 2.026-.789.548-.506.878-1.199.922-1.936v-7.453a3.707 3.707 0 002.426-1.158c.63-.673.975-1.555.967-2.468V14.402l-.03-.34zM2.953 15.745c.78 0 1.53.304 2.081.845.552.54.862 1.275.862 2.04v12.402c.001.38-.074.756-.22 1.107a2.88 2.88 0 01-.638.94 2.947 2.947 0 01-.956.627 2.995 2.995 0 01-3.217-.627A2.866 2.866 0 010 31.032V18.63c0-.38.076-.756.225-1.107.149-.35.366-.669.64-.937.275-.268.6-.48.959-.625a2.995 2.995 0 011.13-.216zM40.057 15.745c.78 0 1.53.304 2.081.845.552.54.862 1.275.862 2.04v12.402c.001.38-.074.756-.221 1.107-.147.351-.364.67-.637.94a2.947 2.947 0 01-.956.627 2.994 2.994 0 01-3.217-.627 2.867 2.867 0 01-.865-2.047V18.63c0-.38.076-.756.225-1.107.148-.35.366-.669.64-.937.275-.268.6-.48.959-.625a2.995 2.995 0 011.129-.216zM8.175 12.058h26.568a10.404 10.404 0 00-3.26-7.293L34.049.498a.307.307 0 00-.122-.461.322.322 0 00-.42.11l-2.42 4.157A16.708 16.708 0 0021.458.898a16.977 16.977 0 00-9.575 3.406L9.504.187a.325.325 0 00-.184-.16.333.333 0 00-.246.01.315.315 0 00-.112.42l2.493 4.238a10.443 10.443 0 00-3.28 7.363zm17.699-5.21c0-.398.161-.78.449-1.062.287-.281.677-.44 1.083-.44.407 0 .797.159 1.084.44.288.282.45.664.45 1.063 0 .398-.162.78-.45 1.062-.287.282-.677.44-1.084.44-.406 0-.796-.158-1.083-.44a1.488 1.488 0 01-.45-1.062zm-11.384 0c0-.398.162-.78.449-1.062.287-.281.677-.44 1.084-.44.406 0 .796.159 1.084.44.287.282.449.664.449 1.063 0 .398-.162.78-.45 1.062-.287.282-.677.44-1.083.44-.407 0-.797-.158-1.084-.44a1.488 1.488 0 01-.449-1.062z" fill="#A4C639"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="intro__item" href="https://www.microsoft.com/ru-ru/store/apps/windows" target="_blank">
+                <span class="visually-hidden">Windows Apps</span>
+                <svg aria-hidden="true" focusable="false" width="44" height="41" fill="none"><path d="M20.908 19.524H0V0h20.908v19.524z" fill="#F05423"/><path d="M44 19.524H23.092V0H44v19.524z" fill="#84C441"/><path d="M20.908 41H0V21.476h20.908V41z" fill="#2DABE2"/><path d="M44 41H23.092V21.476H44V41z" fill="#F9BC15"/></svg>
+              </a>
+            </li>
+          </ul>
+          <p class="intro__legend">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          <picture class="intro__main-illustration">
+            <img src="img/iphone-hand-mobile.png" alt="Телефон с открытым приложением Пинк в руке человека">
+          </picture>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="advantages__container">
+          <h2 class="visually-hidden">Почему "Пинк"?</h2>
+          <p class="advantages__heading">Устали от серости мегаполиса? Нам есть, что вам предложить!</p>
+          <ul class="advantages__list">
+            <!--телефон(ы) сделаем через background-image/псевдоэлемент-->
+            <li class="advantages__item">
+              <h3 class="advantages__title">Поднимает настроение</h3>
+              <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__title">Меняет мир вокруг</h3>
+              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li class="advantages__item">
+              <h3 class="advantages__title">Заводит новых друзей</h3>
+              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="research">
+        <div class="research__container">
+          <h2 class="visually-hidden">Исcледование приложения</h2>
+          <div class="research__column research__column_type_background-container">
+            <!--сделаем через background-image и псевдоэлемент для research__column-->
+          </div>
+          <div class="research__column research__column_type_content">
+            <p class="research__heading">Эффект на 24 часа!</p>
+            <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+            <a class="research__link" href="#">Узнать больше об исследовании</a>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="reviews__container slider">
+          <h2 class="visually-hidden">Отзывы о нас</h2>
+          <ul class="reviews__list slider__list"><!--или без ul/li ??-->
+            <li class="reviews__item slider__item">
+              <blockquote>
+                <cite class="reviews__author-name">Николай Петров</cite>
+                <p class="reviews__author-bio">25 лет, водитель трамвая</p>
+                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              </blockquote>
+            </li>
+            <li class="reviews__item slider__item">
+              <blockquote>
+                <cite class="reviews__author-name">Николай Петров</cite>
+                <p class="reviews__author-bio">35 лет, все еще водитель трамвая</p>
+                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей второй женой в комментариях к выложенной фотографии!»</p>
+              </blockquote>
+            </li>
+            <li class="reviews__item slider__item">
+              <blockquote>
+                <cite class="reviews__author-name">Николай Петров</cite>
+                <p class="reviews__author-bio">45 лет, водитель трамвая по жизни</p>
+                <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей третьей женой в комментариях к выложенной фотографии!»</p>
+              </blockquote>
+            </li>
+          </ul>
+          <button class="reviews__prev" type="button" aria-label="Предыдущий отзыв">Предыдущий отзыв</button>
+          <button class="reviews__next" type="button" aria-label="Следующий отзыв">Следующий отзыв</button>
+          <p class="reviews__toggles slider__toggles">
+            <button class="slider__toggle slider__toggle_current" type="button" aria-label="Первый отзыв">1</button>
+            <button class="slider__toggle" type="button" aria-label="Второй отзыв">2</button>
+            <button class="slider__toggle" type="button" aria-label="Третий отзыв">3</button>
+          </p>
+        </div>
+      </section>
+      <section class="price">
+        <div class="price__container">
+          <h2 class="visually-hidden">Наши тарифы</h2>
+          <table class="table">
+            <tr>
+              <th></th>
+              <th class="table__header"><span class="price__span-accent">База</span> 1,99 USD</th>
+              <th class="table__header table__header_hit"><span class="price__span-accent">Стандарт</span> 3,99 USD</th>
+              <th class="table__header"><span class="price__span-accent">Анлим</span> 9,99 USD</th>
+            </tr>
+            <tr>
+              <td class="table__cell table__cell_type_feature">Розовый фильтр</td>
+              <td class="table__cell table__cell_type_presence">
+                <span class="visually-hidden">Да</span>
+                <svg aria-hidden="true" focusable="false" width="31" height="21" viewBox="0 0 31 21" fill="none">
+                <path d="M30.5559 0.429509C30.4134 0.293412 30.2439 0.185389 30.0571 0.111671C29.8703 0.0379536 29.67 0 29.4676 0C29.2653 0 29.065 0.0379536 28.8782 0.111671C28.6914 0.185389 28.5219 0.293412 28.3794 0.429509L10.3744 17.4958L2.5777 10.1097C2.28714 9.85325 1.90283 9.71362 1.50573 9.72025C1.10864 9.72689 0.72977 9.87928 0.448939 10.1453C0.168108 10.4114 0.00724504 10.7703 0.0002388 11.1464C-0.00676744 11.5226 0.140631 11.8867 0.41138 12.1619L9.29124 20.5741C9.4331 20.7094 9.60187 20.8167 9.7878 20.8898C9.97372 20.9629 10.1731 21.0004 10.3744 21C10.7806 20.9986 11.1698 20.8456 11.4576 20.5741L30.5559 2.48172C30.8405 2.20822 31 1.83963 31 1.45561C31 1.0716 30.8405 0.703003 30.5559 0.429509Z" fill="#3DC644"/>
+                </svg>
+              </td>
+              <td class="table__cell table__cell_type_presence">
+                <span class="visually-hidden">Да</span>
+                <svg aria-hidden="true" focusable="false" width="31" height="21" viewBox="0 0 31 21" fill="none">
+                <path d="M30.5559 0.429509C30.4134 0.293412 30.2439 0.185389 30.0571 0.111671C29.8703 0.0379536 29.67 0 29.4676 0C29.2653 0 29.065 0.0379536 28.8782 0.111671C28.6914 0.185389 28.5219 0.293412 28.3794 0.429509L10.3744 17.4958L2.5777 10.1097C2.28714 9.85325 1.90283 9.71362 1.50573 9.72025C1.10864 9.72689 0.72977 9.87928 0.448939 10.1453C0.168108 10.4114 0.00724504 10.7703 0.0002388 11.1464C-0.00676744 11.5226 0.140631 11.8867 0.41138 12.1619L9.29124 20.5741C9.4331 20.7094 9.60187 20.8167 9.7878 20.8898C9.97372 20.9629 10.1731 21.0004 10.3744 21C10.7806 20.9986 11.1698 20.8456 11.4576 20.5741L30.5559 2.48172C30.8405 2.20822 31 1.83963 31 1.45561C31 1.0716 30.8405 0.703003 30.5559 0.429509Z" fill="#3DC644"/>
+                </svg>
+              </td>
+              <td class="table__cell table__cell_type_presence">
+                <span class="visually-hidden">Да</span>
+                <svg aria-hidden="true" focusable="false" width="31" height="21" viewBox="0 0 31 21" fill="none">
+                <path d="M30.5559 0.429509C30.4134 0.293412 30.2439 0.185389 30.0571 0.111671C29.8703 0.0379536 29.67 0 29.4676 0C29.2653 0 29.065 0.0379536 28.8782 0.111671C28.6914 0.185389 28.5219 0.293412 28.3794 0.429509L10.3744 17.4958L2.5777 10.1097C2.28714 9.85325 1.90283 9.71362 1.50573 9.72025C1.10864 9.72689 0.72977 9.87928 0.448939 10.1453C0.168108 10.4114 0.00724504 10.7703 0.0002388 11.1464C-0.00676744 11.5226 0.140631 11.8867 0.41138 12.1619L9.29124 20.5741C9.4331 20.7094 9.60187 20.8167 9.7878 20.8898C9.97372 20.9629 10.1731 21.0004 10.3744 21C10.7806 20.9986 11.1698 20.8456 11.4576 20.5741L30.5559 2.48172C30.8405 2.20822 31 1.83963 31 1.45561C31 1.0716 30.8405 0.703003 30.5559 0.429509Z" fill="#3DC644"/>
+                </svg>
+              </td>
+            </tr>
+            <tr>
+              <td class="table__cell table__cell_type_feature">Смайлики</td>
+              <td class="table__cell table__cell_type_presence">
+                <span class="visually-hidden">Нет</span>
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <path d="M15.6444 13.5065L26.5531 2.58654C26.6947 2.44667 26.8071 2.28009 26.8838 2.09645C26.9605 1.91281 27 1.71577 27 1.51674C27 1.31772 26.9605 1.12068 26.8838 0.937041C26.8071 0.753403 26.6947 0.58682 26.5531 0.446952C26.268 0.165899 25.8837 0.00834432 25.4834 0.00834432C25.0831 0.00834432 24.6988 0.165899 24.4137 0.446952L13.505 11.3669L2.58626 0.446952C2.44641 0.305366 2.27984 0.192953 2.09622 0.11623C1.9126 0.0395068 1.71558 0 1.51658 0C1.31758 0 1.12056 0.0395068 0.936941 0.11623C0.753322 0.192953 0.586757 0.305366 0.446904 0.446952C0.165881 0.73209 0.00834343 1.11638 0.00834343 1.51674C0.00834343 1.91711 0.165881 2.3014 0.446904 2.58654L11.3657 13.5065L0.446904 24.4164C0.305333 24.5562 0.192932 24.7228 0.116217 24.9064C0.0395025 25.0901 0 25.2871 0 25.4861C0 25.6852 0.0395025 25.8822 0.116217 26.0658C0.192932 26.2495 0.305333 26.4161 0.446904 26.5559C0.730723 26.8394 1.11545 26.9987 1.51658 26.9987C1.91771 26.9987 2.30244 26.8394 2.58626 26.5559L13.505 15.6461L24.4137 26.5559C24.698 26.839 25.0823 26.9985 25.4834 27C25.7826 26.9997 26.075 26.9108 26.3237 26.7444C26.5724 26.5781 26.7662 26.3417 26.8806 26.0653C26.9951 25.7888 27.0251 25.4847 26.9668 25.1912C26.9085 24.8977 26.7645 24.6281 26.5531 24.4164L15.6444 13.5065Z" fill="#F25B26"/>
+                </svg>
+              </td>
+              <td class="table__cell table__cell_type_presence">
+                <span class="visually-hidden">Да</span>
+                <svg aria-hidden="true" focusable="false" width="31" height="21" viewBox="0 0 31 21" fill="none">
+                <path d="M30.5559 0.429509C30.4134 0.293412 30.2439 0.185389 30.0571 0.111671C29.8703 0.0379536 29.67 0 29.4676 0C29.2653 0 29.065 0.0379536 28.8782 0.111671C28.6914 0.185389 28.5219 0.293412 28.3794 0.429509L10.3744 17.4958L2.5777 10.1097C2.28714 9.85325 1.90283 9.71362 1.50573 9.72025C1.10864 9.72689 0.72977 9.87928 0.448939 10.1453C0.168108 10.4114 0.00724504 10.7703 0.0002388 11.1464C-0.00676744 11.5226 0.140631 11.8867 0.41138 12.1619L9.29124 20.5741C9.4331 20.7094 9.60187 20.8167 9.7878 20.8898C9.97372 20.9629 10.1731 21.0004 10.3744 21C10.7806 20.9986 11.1698 20.8456 11.4576 20.5741L30.5559 2.48172C30.8405 2.20822 31 1.83963 31 1.45561C31 1.0716 30.8405 0.703003 30.5559 0.429509Z" fill="#3DC644"/>
+                </svg>
+              </td>
+              <td class="table__cell table__cell_type_presence">
+                <span class="visually-hidden">Да</span>
+                <svg aria-hidden="true" focusable="false" width="31" height="21" viewBox="0 0 31 21" fill="none">
+                <path d="M30.5559 0.429509C30.4134 0.293412 30.2439 0.185389 30.0571 0.111671C29.8703 0.0379536 29.67 0 29.4676 0C29.2653 0 29.065 0.0379536 28.8782 0.111671C28.6914 0.185389 28.5219 0.293412 28.3794 0.429509L10.3744 17.4958L2.5777 10.1097C2.28714 9.85325 1.90283 9.71362 1.50573 9.72025C1.10864 9.72689 0.72977 9.87928 0.448939 10.1453C0.168108 10.4114 0.00724504 10.7703 0.0002388 11.1464C-0.00676744 11.5226 0.140631 11.8867 0.41138 12.1619L9.29124 20.5741C9.4331 20.7094 9.60187 20.8167 9.7878 20.8898C9.97372 20.9629 10.1731 21.0004 10.3744 21C10.7806 20.9986 11.1698 20.8456 11.4576 20.5741L30.5559 2.48172C30.8405 2.20822 31 1.83963 31 1.45561C31 1.0716 30.8405 0.703003 30.5559 0.429509Z" fill="#3DC644"/>
+                </svg>
+              </td>
+            </tr>
+            <tr>
+              <td class="table__cell table__cell_type_feature">Комментарии</td>
+              <td class="table__cell table__cell_type_presence">
+                <span class="visually-hidden">Нет</span>
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <path d="M15.6444 13.5065L26.5531 2.58654C26.6947 2.44667 26.8071 2.28009 26.8838 2.09645C26.9605 1.91281 27 1.71577 27 1.51674C27 1.31772 26.9605 1.12068 26.8838 0.937041C26.8071 0.753403 26.6947 0.58682 26.5531 0.446952C26.268 0.165899 25.8837 0.00834432 25.4834 0.00834432C25.0831 0.00834432 24.6988 0.165899 24.4137 0.446952L13.505 11.3669L2.58626 0.446952C2.44641 0.305366 2.27984 0.192953 2.09622 0.11623C1.9126 0.0395068 1.71558 0 1.51658 0C1.31758 0 1.12056 0.0395068 0.936941 0.11623C0.753322 0.192953 0.586757 0.305366 0.446904 0.446952C0.165881 0.73209 0.00834343 1.11638 0.00834343 1.51674C0.00834343 1.91711 0.165881 2.3014 0.446904 2.58654L11.3657 13.5065L0.446904 24.4164C0.305333 24.5562 0.192932 24.7228 0.116217 24.9064C0.0395025 25.0901 0 25.2871 0 25.4861C0 25.6852 0.0395025 25.8822 0.116217 26.0658C0.192932 26.2495 0.305333 26.4161 0.446904 26.5559C0.730723 26.8394 1.11545 26.9987 1.51658 26.9987C1.91771 26.9987 2.30244 26.8394 2.58626 26.5559L13.505 15.6461L24.4137 26.5559C24.698 26.839 25.0823 26.9985 25.4834 27C25.7826 26.9997 26.075 26.9108 26.3237 26.7444C26.5724 26.5781 26.7662 26.3417 26.8806 26.0653C26.9951 25.7888 27.0251 25.4847 26.9668 25.1912C26.9085 24.8977 26.7645 24.6281 26.5531 24.4164L15.6444 13.5065Z" fill="#F25B26"/>
+                </svg>
+              </td>
+              <td class="table__cell table__cell_type_presence">
+                <span class="visually-hidden">Нет</span>
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                <path d="M15.6444 13.5065L26.5531 2.58654C26.6947 2.44667 26.8071 2.28009 26.8838 2.09645C26.9605 1.91281 27 1.71577 27 1.51674C27 1.31772 26.9605 1.12068 26.8838 0.937041C26.8071 0.753403 26.6947 0.58682 26.5531 0.446952C26.268 0.165899 25.8837 0.00834432 25.4834 0.00834432C25.0831 0.00834432 24.6988 0.165899 24.4137 0.446952L13.505 11.3669L2.58626 0.446952C2.44641 0.305366 2.27984 0.192953 2.09622 0.11623C1.9126 0.0395068 1.71558 0 1.51658 0C1.31758 0 1.12056 0.0395068 0.936941 0.11623C0.753322 0.192953 0.586757 0.305366 0.446904 0.446952C0.165881 0.73209 0.00834343 1.11638 0.00834343 1.51674C0.00834343 1.91711 0.165881 2.3014 0.446904 2.58654L11.3657 13.5065L0.446904 24.4164C0.305333 24.5562 0.192932 24.7228 0.116217 24.9064C0.0395025 25.0901 0 25.2871 0 25.4861C0 25.6852 0.0395025 25.8822 0.116217 26.0658C0.192932 26.2495 0.305333 26.4161 0.446904 26.5559C0.730723 26.8394 1.11545 26.9987 1.51658 26.9987C1.91771 26.9987 2.30244 26.8394 2.58626 26.5559L13.505 15.6461L24.4137 26.5559C24.698 26.839 25.0823 26.9985 25.4834 27C25.7826 26.9997 26.075 26.9108 26.3237 26.7444C26.5724 26.5781 26.7662 26.3417 26.8806 26.0653C26.9951 25.7888 27.0251 25.4847 26.9668 25.1912C26.9085 24.8977 26.7645 24.6281 26.5531 24.4164L15.6444 13.5065Z" fill="#F25B26"/>
+                </svg>
+              </td>
+              <td class="table__cell table__cell_type_presence">
+                <span class="visually-hidden">Да</span>
+                <svg aria-hidden="true" focusable="false" width="31" height="21" viewBox="0 0 31 21" fill="none">
+                <path d="M30.5559 0.429509C30.4134 0.293412 30.2439 0.185389 30.0571 0.111671C29.8703 0.0379536 29.67 0 29.4676 0C29.2653 0 29.065 0.0379536 28.8782 0.111671C28.6914 0.185389 28.5219 0.293412 28.3794 0.429509L10.3744 17.4958L2.5777 10.1097C2.28714 9.85325 1.90283 9.71362 1.50573 9.72025C1.10864 9.72689 0.72977 9.87928 0.448939 10.1453C0.168108 10.4114 0.00724504 10.7703 0.0002388 11.1464C-0.00676744 11.5226 0.140631 11.8867 0.41138 12.1619L9.29124 20.5741C9.4331 20.7094 9.60187 20.8167 9.7878 20.8898C9.97372 20.9629 10.1731 21.0004 10.3744 21C10.7806 20.9986 11.1698 20.8456 11.4576 20.5741L30.5559 2.48172C30.8405 2.20822 31 1.83963 31 1.45561C31 1.0716 30.8405 0.703003 30.5559 0.429509Z" fill="#3DC644"/>
+                </svg>
+              </td>
+            </tr>
+          </table>
+          <p class="price__toggles slider__toggles">
+            <button class="slider__toggle" type="button" aria-label="Тариф База">1</button>
+            <button class="slider__toggle slider__toggle_current" type="button" aria-label="Тариф Стандарт">2</button>
+            <button class="slider__toggle" type="button" aria-label="Тариф Анлим">3</button>
+          </p>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <h3 class="contacts__subtitle">Звоните:</h3>
+              <a class="contacts__text" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__subtitle">Пишите:</h3>
+              <a class="contacts__text" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__subtitle">Приезжайте в гости:</h3>
+              <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+            </li>
+          </ul>
+          <iframe class="contacts__map" title="ул. Большая Конюшенная, 19/8" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300289!2d30.320858715782983!3d59.93871916905453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sus!4v1616819073954!5m2!1sru!2sus"></iframe>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__columns">
+        <div class="footer__column footer__column_content_logo">
+          <a class="logo logo_place_footer"><img src="./img/footer-logo-mobile.svg" width="145" height="40" alt="Логотип приложения Pink"></a>
+        </div>
+        <section class="footer__column footer__column_content_social">
+          <h2 class="visually-hidden">Соцсети</h2>
+          <ul class="footer__social-buttons">
+            <li>
+              <a class="footer__social-button" href="#" target="_blank">
+                <span class="visually-hidden">Twitter</span>
+                <svg aria-hidden="true" focusable="false" width="18" height="14" fill="none"><path d="M11.564.169A3.675 3.675 0 0113.672.14c.688.196 1.291.59 1.723 1.122.71-.21 1.41-.447 2.131-.656a2.03 2.03 0 01-.253.917c-.157.284-.38.533-.653.729.253.026.508-.002.747-.081.24-.08.456-.208.633-.376-.099.414-.3.801-.588 1.131-.287.33-.653.594-1.07.772-.247 6.27-3.367 10.467-10.689 10.296H5.15c-.443 0-4.418-.428-5.149-1.75 1.752.245 3.539-.147 4.984-1.095-1.03-.286-2.852-.447-3.161-2.74.388.133.81.163 1.215.085C1.76 7.705.34 7.039.422 4.993c.398.306.905.462 1.421.438C1.102 5.203-.247 2.31.896.825c1.926 1.723 3.964 3.35 7.59 3.512C8.711 2.205 9.69.777 11.563.169z" fill="#D22856"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="footer__social-button" href="#" target="_blank">
+                <span class="visually-hidden">Facebook</span>
+                <svg aria-hidden="true" focusable="false" width="9" height="18" fill="none"><path d="M6.509 3.193H9V0H6.02C2.762.171 1.6 2.271 2.077 5.816H0v3.336h2.076V18h3.945V9.152h2.958V5.816H6.01c-.02-.998-.041-2.29.499-2.623z" fill="#D22856"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="footer__social-button" href="#" target="_blank">
+                <span class="visually-hidden">Youtube</span>
+                <svg aria-hidden="true" focusable="false" width="15" height="13" fill="none"><path d="M1.834 12.809a1.257 1.257 0 01-1.285.03 1.097 1.097 0 01-.443-.457.97.97 0 01-.092-.603V1.221A.97.97 0 01.106.618C.2.429.355.27.549.16a1.256 1.256 0 011.285.031l12.4 5.502c1.022.445 1.022 1.169 0 1.614l-12.4 5.502z" fill="#D22856"/></svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <p class="footer__column footer__column_content_copyright">
+          Разработано
+          <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+            <span class="visually-hidden">HTML Academy</span>
+            <svg aria-hidden="true" focusable="false" width="27" height="34" viewBox="0 0 60 60"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+          </a>
+        </p>
+      </div>
+    </footer>
   </body>
+
 </html>
