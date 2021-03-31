@@ -1,0 +1,28 @@
+.navigation {
+  background-color: @basic-blue;
+  color: @basic-white;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__link {
+  color: inherit;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: @color-ease;
+
+  &:hover {
+    color: @basic-pink;
+  }
+
+  &:active {
+    color: rgba(@basic-pink, 0.3);
+  }
+}

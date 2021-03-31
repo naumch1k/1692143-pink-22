@@ -1,0 +1,25 @@
+.logo {
+  transition: @color-ease;
+
+  &:hover {
+    color: @basic-pink;
+  }
+
+  &--place--header {
+    color: @basic-white;
+
+    &:active {
+      color: rgba(@basic-white, 0.3);
+    }
+  }
+
+  &--place--footer {
+    color: @basic-blue;
+    transition: opacity 0.3s, @color-ease;
+
+    &:active {
+      color: @basic-blue;
+      opacity: 0.3;
+    }
+  }
+}
