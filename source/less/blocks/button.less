@@ -1,6 +1,7 @@
 .button {
   font-size: 18px;
   line-height: 1;
+  box-sizing: border-box;
 
   &--place--intro {
     width: 280px;
@@ -9,10 +10,10 @@
     text-decoration: none;
     border: 3px solid @basic-white;
     border-radius: 29px;
+    transition: background-color 0.5s, @color-ease;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.5s, @color-ease;
 
     &:hover {
       color: @basic-pink;
@@ -21,6 +22,36 @@
 
     &:active {
       color: rgba(@basic-pink, 0.3);
+    }
+  }
+
+  &--place--form,
+  &--place--modal {
+    margin: 0 auto;
+    padding: 10px;
+    width: 276px;
+    min-height: 59px;
+    color: @basic-white;
+    background-color: @basic-green;
+    font-family: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid @basic-green;
+    border-radius: 5px;
+    transition: background-color 0.5s, @color-ease;
+
+    &:hover {
+      background-color: @darker-green;
+      border: 2px solid @darker-green;
+    }
+
+    &:active {
+      color: rgba(@basic-white, 0.3);
+    }
+
+    &:disabled {
+      background-color: @ligth-grey;
+      border: 2px solid @ligth-grey;
     }
   }
 }

@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page__body">
@@ -39,15 +40,15 @@
     </nav>
   </header>
   <main>
-    <section class="intro">
+    <section class="intro intro--place--form">
       <div class="intro__container">
-        <h1 class="intro__slogan intro__slogan--place--form">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        <h1 class="intro__slogan intro__slogan--place--form">Конкурс на&nbsp;самое безбашенное путешествие с&nbsp;Пинк</h1>
       </div>
     </section>
     <section class="contest">
       <div class="contest__container">
         <h2 class="visually-hidden">Форма для участия конкурсе</h2>
-        <p class="contest__heading section-heading">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+        <p class="contest__heading section-heading">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную карту!</p>
         <form class="form form--place--contest" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="form__fieldset form__fieldset--type--info">
             <ul class="form__list form__flex-container form__flex-container--for--info">
@@ -60,83 +61,89 @@
                 <input class="form__input form__input--type--text" type="text" name="firstname" id="firstname" placeholder="Введите ваше имя *" required>
               </li>
               <li class="form__item form__item--type--text">
-                <label class="form__label form__label--size--s" for="middlename">Отчество</label>
+                <label class="form__label form__label--size--s" for="middlename">Отчество:</label>
                 <input class="form__input form__input--type--text" type="text" name="middlename" id="middlename" placeholder="Ну и отчество тоже">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--type--achievments">
-            <legend class="form__fielset-title">Ваши безбашенные достижения в путешествии</legend>
+          <div class="SHOULD-WE-RETURN-LIST"><!--у меня не получается задать фоновый цвет и верхний внутр.отступ без
+            дополнительной обертки, получается что legend выходит за границу филдсета (как сейчас выглядит блок с радиокнопками)
+          Я что-то опускаю или вернем список для групп полей? -->
+          <fieldset class="form__fieldset form__fieldset--type--achievments form__fielset--SHOULD-WE-RETURN-LIST">
+            <legend class="form__fielset-title form__fielset-title--SHOULD-WE-RETURN-LIST">Ваши безбашенные достижения в&nbsp;путешествии</legend>
             <ul class="form__list form__flex-container form__flex-container--for--achievments">
               <li class="form__item form__item--type--checkbox">
-                <input class="form__input form__input--type--checkbox" type="checkbox" name="achievments" value="selfie" id="selfie" checked>
+                <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="selfie" id="selfie" checked>
                 <label class="form__label form__label--size--m" for="selfie">Сделал селфи с акулой</label>
               </li>
               <li class="form__item form__item--type--checkbox">
-                <input class="form__input form__input--type--checkbox" type="checkbox" name="achievments" value="sunburn" id="sunburn" checked>
+                <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="sunburn" id="sunburn" checked>
                 <label class="form__label form__label--size--m" for="sunburn">Обгорел на пляже</label>
               </li>
               <li class="form__item form__item--type--checkbox">
-                <input class="form__input form__input--type--checkbox" type="checkbox" name="achievments" value="chucky" id="chucky">
+                <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="chucky" id="chucky">
                 <label class="form__label form__label--size--m" for="chucky">Видел Чака Норриса</label>
               </li>
               <li class="form__item form__item--type--checkbox">
-                <input class="form__input form__input--type--checkbox" type="checkbox" name="achievments" value="souvenirs" id="souvenirs">
+                <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="souvenirs" id="souvenirs">
                 <label class="form__label form__label--size--m" for="souvenirs">Накупил сувениров</label>
               </li>
               <li class="form__item form__item--type--checkbox">
-                <input class="form__input form__input--type--checkbox" type="checkbox" name="achievments" value="tower" id="tower" checked>
+                <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="tower" id="tower" checked>
                 <label class="form__label form__label--size--m" for="tower">Удержал башню</label>
               </li>
               <li class="form__item form__item--type--checkbox">
-                <input class="form__input form__input--type--checkbox" type="checkbox" name="achievments" value="hotel" id="hotel">
+                <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="hotel" id="hotel">
                 <label class="form__label form__label--size--m" for="hotel">Разгромил отель</label>
               </li>
             </ul>
           </fieldset>
+        </div>
           <fieldset class="form__fieldset form__fieldset--type--contact-info">
             <legend class="form__fielset-title">Контактная информация</legend>
             <ul class="form__list form__flex-container form__flex-container--for--contact-info">
               <li class="form__item form__item--type--text">
                 <label class="form__label form__label--size--s" for="phone">Номер телефона</label>
-                <input class="form__input form__input--type--tel" id="phone" name="phone" type="tel" placeholder="Номер, пожалуйста">
+                <input class="form__input form__input--type--text" id="phone" name="phone" type="tel" placeholder="Номер, пожалуйста">
               </li>
               <li class="form__item form__item--type--text">
                 <label class="form__label form__label--size--s" for="email">Адрес почты</label>
-                <input class="form__input form__input--type--email" id="email" name="email" type="email" placeholder="Введите почту *" required>
+                <input class="form__input form__input--type--text" id="email" name="email" type="email" placeholder="Введите почту *" required>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--type--app-type">
-            <legend class="form__fielset-title">С каким приложением путешествовали?</legend>
+            <legend class="form__fielset-title">С&nbsp;каким приложением путешествовали?</legend>
             <ul class="form__list form__flex-container form__flex-container--for--app-type">
               <li class="form__item form__item--type--radio">
-                <input class="form__input form__input--type--radio" type="radio" name="app-type" value="iOS" id="iOS" checked>
+                <input class="form__input form__input--type--radio visually-hidden" type="radio" name="app-type" value="iOS" id="iOS" checked>
                 <label class="form__label form__label--size--m" for="iOS">Pink для iOS</label>
               </li>
               <li class="form__item form__item--type--radio">
-                <input class="form__input form__input--type--radio" type="radio" name="app-type" value="Android" id="Android">
+                <input class="form__input form__input--type--radio visually-hidden" type="radio" name="app-type" value="Android" id="Android">
                 <label class="form__label form__label--size--m" for="Android">Pink на Android</label>
               </li>
               <li class="form__item form__item--type--radio">
-                <input class="form__input form__input--type--radio" type="radio" name="app-type" value="Windows" id="Windows">
+                <input class="form__input form__input--type--radio visually-hidden" type="radio" name="app-type" value="Windows" id="Windows">
                 <label class="form__label form__label--size--m" for="Windows">Windows Phone</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--type--impression">
             <legend class="form__fielset-title">Опишите свои эмоции</legend>
-            <textarea class="form__input form__input--type--textarea" name="impression" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <div class="form__list form__flex-container form__flex-container--for--impression">
+              <textarea class="form__input form__input--type--textarea" name="impression" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </div>
           </fieldset>
           <div class="form__flex-container form__flex-container--for--button">
             <button class="button button--place--form" type="submit">Отправить форму</button>
-            <p class="form__note"><sup>*</sup> — обязательные <span>для заполнения</span> поля</p>
+            <p class="form__note"><sup class="form__sup">*</sup> &mdash; обязательные <span class="form__span">для заполнения</span> поля</p>
           </div>
         </form>
         <div class="modal modal--type--success">
           <div class="modal__text-block">
             <h3 class="modal__title">Ваша заявка отправлена</h3>
-            <p class="modal__description">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+            <p class="modal__description">Спасибо за&nbsp;ваше участие, ваша заявка уже поступила к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;рассмотрим ее&nbsp;и&nbsp;оповестим вас.</p>
           </div>
           <div class="modal__button-block">
             <button class="button button--place--modal" type="button">Закрыть окно</button>
@@ -145,7 +152,7 @@
         <div class="modal modal--type--error">
           <div class="modal__text-block">
             <h3 class="modal__title">Что-то пошло не так!</h3>
-            <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+            <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли их&nbsp;заполнить</p>
           </div>
           <div class="modal__button-block">
             <button class="button button--place--modal" type="button">Ок</button>
