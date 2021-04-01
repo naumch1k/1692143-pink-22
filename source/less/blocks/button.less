@@ -1,0 +1,26 @@
+.button {
+  font-size: 18px;
+  line-height: 1;
+
+  &--place--intro {
+    width: 280px;
+    height: 55px;
+    color: @basic-white;
+    text-decoration: none;
+    border: 3px solid @basic-white;
+    border-radius: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s, @color-ease;
+
+    &:hover {
+      color: @basic-pink;
+      background-color: @basic-white;
+    }
+
+    &:active {
+      color: rgba(@basic-pink, 0.3);
+    }
+  }
+}
