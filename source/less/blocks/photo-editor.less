@@ -1,0 +1,34 @@
+.photo-editor__heading {
+  padding: 49px 0 52px;
+}
+
+.photo-editor__controls-buttons {
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 35px;
+}
+
+.photo-editor__buttons {
+  padding: 38px 0 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid rgba(@basic-blue, 0.1);
+  /*уже вижу, что эта граница скорее у слайдеров должна быть. Думаю*/
+}
+
+.photo-editor__controls-button {
+  padding: 0;
+  border: none;
+  color: rgba(@basic-blue, 0.3);
+  background-color: transparent;
+
+  &:hover:not(.photo-editor__controls-button--active) {
+    color: rgba(@basic-blue, 0.5);
+  }
+
+  &--active {
+    color: @basic-pink;
+  }
+}

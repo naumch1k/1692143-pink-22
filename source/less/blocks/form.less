@@ -1,6 +1,8 @@
-.SHOULD-WE-RETURN-LIST {
-  background-color: @smoky-grey;
-  padding: 40px 0 46px;
+.form {
+  &--place--photo-editor {
+    padding: 20px 0;
+    background-color: @smoky-grey;
+  }
 }
 
 .form__flex-container {
@@ -27,31 +29,50 @@
   }
 }
 
-.form__fieldset:not(.form__fielset--SHOULD-WE-RETURN-LIST) {
+.form__fieldset {
   margin: 0;
-  padding: 42px 0 44px;
   border: none;
   box-sizing: border-box;
+  position: relative;
 
-  /* &--type--achievments, */
-  /* &--type--app-type {
+  &--type--info {
+    padding: 42px 0 46px;
+  }
+
+  &--type--contact-info {
+    padding: 40px 0 44px;
+  }
+
+  &--type--achievments,
+  &--type--app-type {
     background-color: @smoky-grey;
-  } */
-}
+    padding: 112px 0 44px;
+  }
 
-.form__fieldset--type--app-type {
-  background-color: @smoky-grey;
+  &--type--impression {
+    padding: 74px 0 52px;
+  }
+
+  &--type--controls {
+    padding: 42px 0 34px;
+  }
 }
 
 .form__fielset-title {
+  width: 220px;/*еще вернусь сюда*/
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: @basic-pink;
   text-align: center;
+  position: absolute;
+  top: 42px;
+  left: 50%;
+  transform: translate(-50%);
 
-  &--SHOULD-WE-RETURN-LIST {
-    margin: 0 0 44px;
+  &--for--info,
+  &--for--contact-info {
+    display: none;
   }
 }
 
@@ -86,8 +107,11 @@
   &--type--radio {
     position: relative;
   }
-}
 
+  &--type--file {
+    display: none;
+  }
+}
 
 .form__input {
   &--type--text {
@@ -130,6 +154,10 @@
       color: @basic-blue;
     }
   }
+
+  &--type--range {
+    display: none;
+  }
 }
 
 .form__note {
@@ -145,6 +173,10 @@
 
 .form__span {
   display: none;
+}
+
+.form__image {
+  vertical-align: bottom;
 }
 
 // кастомные чекбоксы

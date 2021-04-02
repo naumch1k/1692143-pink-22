@@ -1,0 +1,52 @@
+.range-controls__item {
+  width: 240px;
+  height: 40px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px 0 19px;
+  position: relative;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.range-controls__scale {
+  height: 2px;
+  background-color: @darker-blue;
+}
+
+.range-controls__bar {
+  height: 2px;
+  background-color: @darker-blue;
+}
+
+.range-controls__toggle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: @basic-white;
+  border: 2px solid @basic-pink;
+  cursor: pointer;
+
+  &--for--crop {
+    top: 13px;
+    left: 185px;
+  }
+
+  &--for--fill {
+    top: 13px;
+    left: 29px;
+  }
+
+  &--for--contrast {
+    top: 13px;
+    left: 113px;
+  }
+
+  &:active {
+    background-color: @basic-pink;
+  }
+}

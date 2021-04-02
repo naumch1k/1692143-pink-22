@@ -51,6 +51,7 @@
         <p class="contest__heading section-heading">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную карту!</p>
         <form class="form form--place--contest" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="form__fieldset form__fieldset--type--info">
+            <legend class="form__fielset-title form__fielset-title--for--info">ФИО</legend>
             <ul class="form__list form__flex-container form__flex-container--for--info">
               <li class="form__item form__item--type--text">
                 <label class="form__label form__label--size--s" for="lastname">Фамилия:</label>
@@ -66,11 +67,8 @@
               </li>
             </ul>
           </fieldset>
-          <div class="SHOULD-WE-RETURN-LIST"><!--у меня не получается задать фоновый цвет и верхний внутр.отступ без
-            дополнительной обертки, получается что legend выходит за границу филдсета (как сейчас выглядит блок с радиокнопками)
-          Я что-то опускаю или вернем список для групп полей? -->
-          <fieldset class="form__fieldset form__fieldset--type--achievments form__fielset--SHOULD-WE-RETURN-LIST">
-            <legend class="form__fielset-title form__fielset-title--SHOULD-WE-RETURN-LIST">Ваши безбашенные достижения в&nbsp;путешествии</legend>
+          <fieldset class="form__fieldset form__fieldset--type--achievments">
+            <legend class="form__fielset-title">Ваши безбашенные достижения в&nbsp;путешествии</legend>
             <ul class="form__list form__flex-container form__flex-container--for--achievments">
               <li class="form__item form__item--type--checkbox">
                 <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="selfie" id="selfie" checked>
@@ -98,9 +96,8 @@
               </li>
             </ul>
           </fieldset>
-        </div>
           <fieldset class="form__fieldset form__fieldset--type--contact-info">
-            <legend class="form__fielset-title">Контактная информация</legend>
+            <legend class="form__fielset-title form__fielset-title--for--contact-info">Контактная информация</legend>
             <ul class="form__list form__flex-container form__flex-container--for--contact-info">
               <li class="form__item form__item--type--text">
                 <label class="form__label form__label--size--s" for="phone">Номер телефона</label>

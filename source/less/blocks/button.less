@@ -2,6 +2,7 @@
   font-size: 18px;
   line-height: 1;
   box-sizing: border-box;
+  transition: border 0.5s, background-color 0.5s, @color-ease;
 
   &--place--intro {
     width: 280px;
@@ -10,7 +11,6 @@
     text-decoration: none;
     border: 3px solid @basic-white;
     border-radius: 29px;
-    transition: background-color 0.5s, @color-ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,6 @@
     text-transform: uppercase;
     border: 2px solid @basic-green;
     border-radius: 5px;
-    transition: background-color 0.5s, @color-ease;
 
     &:hover {
       background-color: @darker-green;
@@ -52,6 +51,45 @@
     &:disabled {
       background-color: @ligth-grey;
       border: 2px solid @ligth-grey;
+    }
+  }
+
+  &--place--photo-editor {
+    width: 280px;
+    height: 55px;
+    background-color: transparent;
+    font-weight: 700;
+    border-radius: 30px;
+
+    &[type="submit"] {
+      color: @basic-pink;
+      border: 3px solid @basic-pink;
+
+      &:hover { /* третий & в глубину - уже слишком? */
+        color: @basic-white;
+        background-color: @basic-pink;
+        border: 3px solid @basic-pink;
+      }
+
+      &:active {
+        color: rgba(@basic-white, 0.3);
+      }
+    }
+
+    &[type="reset"] {
+      color: rgba(@basic-blue, 0.1);
+      border: 3px solid rgba(@basic-blue, 0.1);
+
+      &:hover {
+        color: rgba(@basic-blue, 0.3);
+        border: 3px solid rgba(@basic-blue, 0.3);
+      }
+
+      &:active {
+        color: rgba(@basic-white, 0.3);
+        background-color: rgba(@basic-blue, 0.3);
+        border: 3px solid rgba(@basic-blue, 0);
+      }
     }
   }
 }
