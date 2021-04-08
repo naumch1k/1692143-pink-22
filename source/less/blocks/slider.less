@@ -1,0 +1,37 @@
+.slider__toggles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 19px;
+
+  &--place--reviews {
+    margin: 44px 0 0;
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &--place--price {
+    margin: 45px 0 0;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.slider__toggle {
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  background-color: rgba(@basic-blue, 0.3);
+  border: none;
+  border-radius: 50%;
+  box-sizing: content-box;
+
+  &--current {
+    background-color: @basic-white;
+    border: 3px solid @basic-blue;
+  }
+}

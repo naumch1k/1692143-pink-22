@@ -1,25 +1,105 @@
 .table {
-  font-size: 18px;
+  width: 100%;
   line-height: 30px;
   border-collapse: collapse;
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .table__header {
-  background-color: @basic-blue;
-  color: @basic-white;
-  font-weight: 200;
+  box-sizing: border-box;
+  width: 25%;
+
+  @media (max-width: @mobile-width-only) {
+    min-width: calc(100vw - (20px * 2));
+  }
+
+  &:not(:first-of-type) {
+    padding: 19px 20px 35px;
+    background-color: @basic-blue;
+    color: @basic-white;
+    border-right: 2px solid @ligth-grey;
+    font-size: 18px;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
+  &:first-of-type {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: table-cell;
+    }
+  }
+
+  &:nth-of-type(2) {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &:last-of-type {
+    border-right: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
 }
 
-.table__span-accent {
+.table__plan-name {
   font-size: 16px;
   font-weight: 700;
+  display: block;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .table__cell {
-  padding: 0;
+  padding: 20px;
+  background-color: @basic-white;
   border: 2px solid @ligth-grey;
 
+  @media (min-width: @tablet-width) {
+    padding: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px;
+  }
+
+  &--type--feature {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: table-cell;
+    }
+
+    @media (min-width: @desktop-width) {/*для всей табл? */
+      font-size: 18px;
+    }
+  }
+
   &--type--presence {
-    text-align: center;
+    @media (min-width: @tablet-width) {
+      text-align: center;
+    }
+  }
+}
+
+.table__feature-name {
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.table__mark {
+  @media (max-width: @mobile-width-only) {
+    float: right;
   }
 }

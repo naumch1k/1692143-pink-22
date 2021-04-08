@@ -1,0 +1,98 @@
+/*потом брейкпоинты поправим, чтобы на 900px-1199px получше смотрелось*/
+.research {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @smoky-grey;
+  }
+}
+
+.research__container {
+  padding: 54px @tablet-side-padding 59px;
+  min-height: 276px;
+  position: relative;
+  background-image: url("./../../img/timer.svg");
+  background-position: 20px 54px;
+  background-size: 236px 276px;
+  background-repeat: no-repeat;
+
+  @media (min-width: @desktop-width) {
+    padding: 17px @desktop-side-padding 67px;
+    min-height: 345px;
+    background-position: 130px 17px;
+    background-size: 298px 345px;
+  }
+
+  &::before {
+    content: "24";
+    width: 202px;
+    height: 202px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 38px;
+    top: 109px;
+    color: @basic-pink;
+    border: 16px solid @basic-pink;
+    border-radius: 50%;
+    font-size: 96px;
+    line-height: 1.7;
+    font-weight: 700;
+    text-align: center;
+
+    @media (min-width: @desktop-width) {
+      width: 252px;
+      height: 252px;
+      left: 154px;
+      top: 85px;
+      border: 18px solid @basic-pink;
+      font-size: 120px;
+    }
+  }
+}
+
+.research__content {
+  padding: 48px 0 20px 330px;
+
+  @media (min-width: @desktop-width) {
+    padding: 98px 0 20px 480px;
+  }
+}
+
+.research__heading {
+  max-width: 170px;
+  margin: 0 0 24px;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  @media (min-width: @desktop-width) {
+    max-width: none;
+    margin: 0 0 37px;
+    line-height: 1;
+  }
+}
+
+.research__text {
+  margin: 0 0 24px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 47px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.research__link {
+  color: @basic-pink;
+  transition: @color-ease;
+
+  &:hover {
+    color: @basic-blue;
+  }
+
+  &:active {
+    color: rgba(@basic-blue, 0.3);
+  }
+}

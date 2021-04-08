@@ -1,11 +1,78 @@
 .advantages {
-  background: url("./../../img/grey-bg.png") no-repeat;
+  background-color: @smoky-grey;
+}
+
+.advantages__heading {
+  padding-top: 46px;
+  padding-bottom: 67px;
+
+  @media (max-width: @mobile-width-only) {
+    & > p:not(:last-of-type) {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 58px;
+    padding-bottom: 96px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 77px;
+    padding-bottom: 72px;
+  }
+}
+
+.advantages__container {
+  padding: 55px @mobile-side-padding 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 48px;
+
+  @media (min-width: @tablet-width) {
+    padding: 55px @tablet-side-padding 0;
+    flex-direction: row-reverse;
+    row-gap: 0;
+    column-gap: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 55px @desktop-side-padding 0;
+    flex-direction: column-reverse;
+    row-gap: 59px;
+    column-gap: 0;
+  }
 }
 
 .advantages__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 0 49px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.advantages__item {
+  margin: 0 0 43px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    max-width: 250px;
+  }
 }
 
 .advantages__title {
@@ -13,8 +80,43 @@
   font-size: 18px;
   font-weight: 700;
   color: @basic-black;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto 35px;
+    font-size: 30px;
+    line-height: 1;
+  }
 }
 
 .advantages__description {
-  margin: 0 0 43px;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.advantages__picture {
+  height: 278px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 100%;
+    width: 268px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 278px;
+    width: 100%;
+  }
+
+  &--stage--grey,
+  &--stage--pink {
+    display: none;
+  }
+
+  &--stage--smiley {
+    background: url("./../../img/iPhone-smiley.png") no-repeat center 0%;
+  }
 }

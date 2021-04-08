@@ -1,4 +1,5 @@
 .logo {
+  display: block;
   transition: @color-ease;
 
   &:hover {
@@ -6,7 +7,18 @@
   }
 
   &--place--header {
+    padding-bottom: 23px;
     color: @basic-white;
+    border-bottom: 1px solid @basic-black;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 42px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 0;
+      border: none;
+    }
 
     &:active {
       color: rgba(@basic-white, 0.3);

@@ -1,3 +1,26 @@
 .header {
-  background-color: rgba(@basic-black, 0.3);
+  width: 100%;
+  padding: 23px 0 0;
+  background-color: @basic-blue;
+  /* background-color: rgba(@basic-black, 0.3); */
+  /* position: absolute; */
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 27px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 27px 0;
+  }
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
