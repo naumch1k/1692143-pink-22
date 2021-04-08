@@ -2,6 +2,7 @@
   color: @basic-white;
   background: @darker-blue url("./../../img/back-mobile.jpg") no-repeat;
 
+
   &--place--form,
   &--place--photo {
     min-height: 171px;
@@ -10,23 +11,90 @@
   }
 }
 
+.intro__container {
+  padding: 95px @mobile-side-padding 38px;
+
+  @media (min-width: @tablet-width) {
+    padding: 102px @tablet-side-padding 119px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 114px @desktop-side-padding 130px;
+  }
+}
+
+.intro__inner-container {
+  @media (min-width: @tablet-width) {
+    max-width: 300px;
+  }
+}
+
+.intro__button {
+  margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 67px;
+  }
+}
+
 .intro__slogan {
-  margin: 0;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 24px;
   line-height: 33px;
   font-weight: 200;
   text-align: center;
 
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+  }
+
   &--place--index {
+    max-width: 280px;
+    margin-bottom: 340px;
     line-height: 1.2;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 39px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 51px;
+      font-size: 50px;
+      line-height: 68px;
+    }
   }
 }
 
 .intro__list {
   list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 58px;
+  }
 }
 
 .intro__legend {
   margin: 0;
   font-weight: 200;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
 }

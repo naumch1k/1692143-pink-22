@@ -1,3 +1,13 @@
 .price {
-  background: url("./../../img/grey-bg.png") no-repeat;
+  padding: 83px @mobile-side-padding 49px;
+  background-color: @smoky-grey;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    padding: 83px @tablet-side-padding 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 83px @desktop-side-padding 98px;
+  }
 }
