@@ -42,9 +42,9 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="page__content">
       <section class="intro intro--place--form">
-        <div class="intro__container">
+        <div class="intro__container intro__container--place--form">
           <h1 class="intro__slogan intro__slogan--place--form">Конкурс на&nbsp;самое безбашенное путешествие с&nbsp;Пинк</h1>
         </div>
       </section>
@@ -55,45 +55,45 @@
           <form class="form form--place--contest" method="post" action="https://echo.htmlacademy.ru">
             <fieldset class="form__fieldset form__fieldset--type--info">
               <legend class="form__fielset-title form__fielset-title--for--info">ФИО</legend>
-              <ul class="form__list form__flex-container form__flex-container--for--info">
+              <ul class="form__list form__container form__container--for--info">
                 <li class="form__item form__item--type--text">
-                  <label class="form__label form__label--size--s" for="lastname">Фамилия:</label>
+                  <label class="form__label form__label--size--s form__label--for--type-text" for="lastname">Фамилия:</label>
                   <input class="form__input form__input--type--text" type="text" name="lastname" id="lastname" placeholder="Укажите фамилию *" required>
                 </li>
                 <li class="form__item form__item--type--text">
-                  <label class="form__label form__label--size--s" for="firstname">Имя:</label>
+                  <label class="form__label form__label--size--s form__label--for--type-text" for="firstname">Имя:</label>
                   <input class="form__input form__input--type--text" type="text" name="firstname" id="firstname" placeholder="Введите ваше имя *" required>
                 </li>
                 <li class="form__item form__item--type--text">
-                  <label class="form__label form__label--size--s" for="middlename">Отчество:</label>
+                  <label class="form__label form__label--size--s form__label--for--type-text" for="middlename">Отчество:</label>
                   <input class="form__input form__input--type--text" type="text" name="middlename" id="middlename" placeholder="Ну и отчество тоже">
                 </li>
               </ul>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--type--achievments">
-              <legend class="form__fielset-title">Ваши безбашенные достижения в&nbsp;путешествии</legend>
-              <ul class="form__list form__flex-container form__flex-container--for--achievments">
-                <li class="form__item form__item--type--checkbox">
+              <legend class="form__fielset-title form__fielset-title--for--achievments">Ваши безбашенные достижения в&nbsp;путешествии</legend>
+              <ul class="form__list form__container form__container--for--achievments">
+                <li class="form__item form__item--type--checkbox form__item--for--selfie">
                   <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="selfie" id="selfie" checked>
                   <label class="form__label form__label--size--m" for="selfie">Сделал селфи с акулой</label>
                 </li>
-                <li class="form__item form__item--type--checkbox">
+                <li class="form__item form__item--type--checkbox form__item--for--sunburn">
                   <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="sunburn" id="sunburn" checked>
                   <label class="form__label form__label--size--m" for="sunburn">Обгорел на пляже</label>
                 </li>
-                <li class="form__item form__item--type--checkbox">
+                <li class="form__item form__item--type--checkbox form__item--for--chucky">
                   <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="chucky" id="chucky">
                   <label class="form__label form__label--size--m" for="chucky">Видел Чака Норриса</label>
                 </li>
-                <li class="form__item form__item--type--checkbox">
+                <li class="form__item form__item--type--checkbox form__item--for--souvenirs">
                   <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="souvenirs" id="souvenirs">
                   <label class="form__label form__label--size--m" for="souvenirs">Накупил сувениров</label>
                 </li>
-                <li class="form__item form__item--type--checkbox">
+                <li class="form__item form__item--type--checkbox form__item--for--tower">
                   <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="tower" id="tower" checked>
                   <label class="form__label form__label--size--m" for="tower">Удержал башню</label>
                 </li>
-                <li class="form__item form__item--type--checkbox">
+                <li class="form__item form__item--type--checkbox form__item--for--hotel">
                   <input class="form__input form__input--type--checkbox visually-hidden" type="checkbox" name="achievments" value="hotel" id="hotel">
                   <label class="form__label form__label--size--m" for="hotel">Разгромил отель</label>
                 </li>
@@ -101,20 +101,20 @@
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--type--contact-info">
               <legend class="form__fielset-title form__fielset-title--for--contact-info">Контактная информация</legend>
-              <ul class="form__list form__flex-container form__flex-container--for--contact-info">
-                <li class="form__item form__item--type--text">
-                  <label class="form__label form__label--size--s" for="phone">Номер телефона</label>
+              <ul class="form__list form__container form__container--for--contact-info">
+                <li class="form__item form__item--type--email"><!--названия-->
+                  <label class="form__label form__label--size--s form__label--for--type-email" for="phone">Номер телефона</label>
                   <input class="form__input form__input--type--text" id="phone" name="phone" type="tel" placeholder="Номер, пожалуйста">
                 </li>
-                <li class="form__item form__item--type--text">
-                  <label class="form__label form__label--size--s" for="email">Адрес почты</label>
+                <li class="form__item form__item--type--email">
+                  <label class="form__label form__label--size--s form__label--for--type-email" for="email">Адрес почты</label>
                   <input class="form__input form__input--type--text" id="email" name="email" type="email" placeholder="Введите почту *" required>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--type--app-type">
-              <legend class="form__fielset-title">С&nbsp;каким приложением путешествовали?</legend>
-              <ul class="form__list form__flex-container form__flex-container--for--app-type">
+              <legend class="form__fielset-title form__fielset-title--for--app-type">С&nbsp;каким приложением путешествовали?</legend>
+              <ul class="form__list form__container form__container--for--app-type">
                 <li class="form__item form__item--type--radio">
                   <input class="form__input form__input--type--radio visually-hidden" type="radio" name="app-type" value="iOS" id="iOS" checked>
                   <label class="form__label form__label--size--m" for="iOS">Pink для iOS</label>
@@ -130,12 +130,12 @@
               </ul>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--type--impression">
-              <legend class="form__fielset-title">Опишите свои эмоции</legend>
-              <div class="form__list form__flex-container form__flex-container--for--impression">
+              <legend class="form__fielset-title  form__fielset-title--for--impression">Опишите свои эмоции</legend>
+              <div class="form__list form__container form__container--for--impression">
                 <textarea class="form__input form__input--type--textarea" name="impression" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </div>
             </fieldset>
-            <div class="form__flex-container form__flex-container--for--button">
+            <div class="form__container form__container--for--button">
               <button class="button button--place--form" type="submit">Отправить форму</button>
               <p class="form__note"><sup class="form__sup">*</sup> &mdash; обязательные <span class="form__span">для заполнения</span> поля</p>
             </div>

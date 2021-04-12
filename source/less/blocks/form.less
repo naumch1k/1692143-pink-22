@@ -1,22 +1,61 @@
 .form {
+  background-color: @basic-white;
+
+  &--place--contest {
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    gap: 65px;
+    }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px 74px;
+    }
+  }
+
   &--place--photo-editor {
     padding: 20px 0;
     background-color: @smoky-grey;
   }
 }
 
-.form__flex-container {
+.form__container {
   display: flex;
   flex-direction: column;
 
-  &--for--info,
-  &--for--contact-info,
-  &--for--impression {
+  &--for--info {
     gap: 29px;
+
+    @media (min-width: @tablet-width) {
+      gap: 56px;
+    }
+  }
+
+  &--for--contact-info {
+    gap: 29px;
+
+    @media (min-width: @tablet-width) {
+      gap: 41px;
+    }
+
+    @media (min-width: @desktop-width) {
+      flex-direction: row;
+      gap: 74px;
+    }
   }
 
   &--for--achievments {
     gap: 47px;
+
+    @media (min-width: @desktop-width) {
+      /* flex-direction: row;
+      flex-wrap: wrap;
+      gap: 40px; */
+      display: grid; //как будто гридом проще
+      grid-template-columns: 260px 239px 1fr;
+      gap: 47px 55px;
+    }
   }
 
   &--for--app-type {
@@ -24,42 +63,134 @@
   }
 
   &--for--button {
+    align-items: center;
     gap: 56px;
     padding: 0 0 26px;
+
+    @media (min-width: @tablet-width) {
+      width: calc(100% - @tablet-side-padding * 2);
+      margin: 5px auto 0;
+      padding: 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
   }
 }
 
 .form__fieldset {
   margin: 0;
+  padding-right: @mobile-side-padding;
+  padding-left: @mobile-side-padding;
   border: none;
-  box-sizing: border-box;
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    &:not(:first-of-type) {
+      border: 2px solid @ligth-grey;
+      padding-right: 60px;
+      padding-left: 60px;
+    }
+  }
+
   &--type--info {
-    padding: 42px 0 46px;
+    padding-top: 42px;
+    padding-bottom: 46px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
   }
 
   &--type--contact-info {
-    padding: 40px 0 44px;
+    padding-top: 40px;
+    padding-bottom: 44px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 41px;
+      padding-bottom: 37px;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
   }
 
-  &--type--achievments,
+  &--type--achievments {
+    background-color: @smoky-grey;
+    padding-top: 112px;
+    padding-bottom: 44px;
+
+    @media (min-width: @tablet-width) {
+      background-color: @basic-white;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+  }
+
   &--type--app-type {
     background-color: @smoky-grey;
-    padding: 112px 0 44px;
+    padding-top: 112px;
+    padding-bottom: 44px;
+
+    @media (min-width: @tablet-width) {
+      background-color: @basic-white;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 2;
+      grid-column-end: -1;
+    }
   }
 
   &--type--impression {
-    padding: 74px 0 52px;
+    padding-top: 74px;
+    padding-bottom: 52px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 42px;
+      padding-bottom: 53px;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
   }
 
   &--type--controls {
-    padding: 42px 0 34px;
+    padding-top: 42px;
+    padding-bottom: 34px;
   }
 }
 
 .form__fielset-title {
-  width: 220px;/*еще вернусь сюда*/
+  width: 220px;//еще вернусь сюда
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -70,9 +201,45 @@
   left: 50%;
   transform: translate(-50%);
 
-  &--for--info,
+  @media (min-width: @tablet-width) {
+    width: 375px;//еще вернусь сюда
+    position: static;
+    transform: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 200px;//еще вернусь сюда
+  }
+
+  &--for--info {
+    display: none;
+    }
+
+  &--for--achievments {
+    @media (min-width: @tablet-width) {
+      padding: 0 30px;
+    }
+  }
+
   &--for--contact-info {
     display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      padding: 0 30px;
+    }
+  }
+
+  &--for--app-type {
+    @media (min-width: @tablet-width) {
+      padding: 0 25px;
+    }
+  }
+
+  &--for--impression {
+    @media (min-width: @tablet-width) {
+      padding: 0 38px;
+    }
   }
 }
 
@@ -86,7 +253,6 @@
   line-height: 30px;
 
   &--size--s {
-    margin-left: 23px;
     font-size: 14px;
     text-transform: uppercase;
     color: @basic-pink;
@@ -95,18 +261,87 @@
   &--size--m {
     font-size: 18px;
   }
+
+  &--for--type-email,
+  &--for--type-text {
+    margin-left: 23px;
+
+    &:not(.form__label--for--type-email) {
+      @media (min-width: @tablet-width) {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 .form__item {
   &--type--text {
     display: flex;
     flex-direction: column;
+    column-gap: 20px;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
-  &--type--checkbox,
+  &--type--email {
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: column-reverse;
+      row-gap: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      flex-grow: 1;
+    }
+  }
+
+  &--type--checkbox {
+    position: relative;
+
+    /* @media (min-width: @desktop-width) {
+      width: 260px;
+    } */
+  }
+
   &--type--radio {
     position: relative;
   }
+
+  /* &--for--selfie {
+    order: 1;
+  } */
+
+  &--for--chucky {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    //order: 2;
+  }
+
+  &--for--tower {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    //order: 3;
+  }
+
+ /*  &--for--sunburn {
+    order: 4;
+  }
+
+  &--for--souvenirs {
+    order: 5;
+  }
+
+  &--for--hotel {
+    order: 6;
+  } */
 }
 
 .form__input {
@@ -119,6 +354,10 @@
     border: 2px solid @ligth-grey;
     border-radius: 5px;
     outline: none;
+
+    @media (min-width: @tablet-width) {
+      flex-grow: 1;
+    }
 
     &::placeholder {
       font-size: 18px;
@@ -173,6 +412,10 @@
 
 .form__span {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
 }
 
 .form__image {

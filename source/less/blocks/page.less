@@ -3,7 +3,7 @@
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
-  background-color: @basic-white;
+  background-color: @ligth-grey;//
   color: @basic-blue;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -12,7 +12,16 @@
 
 .page__container {
   min-width: 320px;
-  /* margin: 0 auto; */
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 30px -4px rgba(@basic-black, 0.6);
+  }
+}
+
+.page__content {
+  background-color: @basic-white;
 }
