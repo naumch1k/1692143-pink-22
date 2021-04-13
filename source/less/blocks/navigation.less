@@ -24,6 +24,7 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    gap: 79px;
   }
 }
 
@@ -36,6 +37,10 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     border: none;
+
+    &--current {
+      border-bottom: 2px solid @basic-white;
+    }
   }
 }
 
@@ -55,5 +60,20 @@
 
   &:active {
     color: rgba(@basic-pink, 0.3);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: none;
+
+    &:hover {
+      color: @basic-pink;
+    }
+
+    &:active {
+      color: rgba(@basic-white, 0.3);
+    }
   }
 }

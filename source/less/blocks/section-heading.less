@@ -1,18 +1,21 @@
 .section-heading {
   margin: 0;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-right: @mobile-side-padding;
+  padding-left: @mobile-side-padding;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
   background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
+    padding-right: @tablet-side-padding;
+    padding-left: @tablet-side-padding;
     font-size: 18px;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 18px;
+    padding-right: @desktop-side-padding;
+    padding-left: @desktop-side-padding;
   }
 
   &--place--index {

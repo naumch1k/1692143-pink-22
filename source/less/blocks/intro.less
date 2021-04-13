@@ -1,7 +1,6 @@
 .intro {
   color: @basic-white;
-  /* background: @darker-blue url("./../../img/back-mobile.jpg") no-repeat; */
-  background: @darker-blue url("./img/back-mobile.jpg") no-repeat;
+  background: @darker-blue url("../img/back-mobile.jpg") no-repeat;
 }
 
 .intro__container {
@@ -47,6 +46,21 @@
       padding-bottom: 104px;
     }
   }
+
+  &--place--photo {
+    padding-top: 102px;
+    padding-bottom: 84px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 191px;
+      padding-bottom: 143px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 184px;
+      padding-bottom: 104px;
+    }
+  }
 }
 
 .intro__inner-container {
@@ -68,9 +82,7 @@
 }
 
 .intro__slogan {
-  margin-top: 0;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0;
   font-size: 24px;
   line-height: 33px;
   font-weight: 200;
@@ -82,7 +94,9 @@
 
   &--place--index {
     max-width: 280px;
+    margin-right: auto;
     margin-bottom: 340px;
+    margin-left: auto;
     line-height: 1.2;
 
     @media (min-width: @tablet-width) {
@@ -96,9 +110,9 @@
     }
   }
 
-  &--place--form {
+  &--place--form,
+  &--place--photo {
     @media (min-width: @tablet-width) {
-      margin: 0;
       font-size: 50px;
       line-height: 68px;
     }
