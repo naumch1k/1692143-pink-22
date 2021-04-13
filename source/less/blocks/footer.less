@@ -1,5 +1,14 @@
 .footer {
   padding: 40px 0;
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    padding: 36px 0 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 70px 0 75px;
+  }
 }
 
 .footer__columns {
@@ -30,6 +39,10 @@
   &--content--copyright {
     margin: 0;
     line-height: 18px;
+
+    @media (min-width: @desktop-width) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -40,6 +53,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 14px;
+
+  @media (min-width: @desktop-width) {
+    gap: 11px;
+  }
 }
 
 .footer__social-button {
