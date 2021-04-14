@@ -1,35 +1,88 @@
 .card {
   display: grid;
   grid-template-rows: 180px 1fr;
-  background-color: @smoky-grey;
+
+  @media (min-width: @tablet-width) {
+    grid-template-rows: 300px 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-rows: 400px 1fr;
+  }
 
   &--panorama {
     margin: 20px 0;
+    grid-template-rows: 137px 1fr;
     position: relative;
+
+    @media (min-width: @tablet-width) {
+      margin: 20px 0 50px;
+      grid-template-rows: 509px 1fr;
+      background-color: @basic-white;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-template-rows: 506px 1fr;
+    }
 
     &::before {
       content: "Панорама дня";
       position: absolute;
       top: 0;
-      right: 20px;
+      right: @mobile-side-padding;
       padding: 6px 20px;
       font-size: 12px;
       font-weight: 700;
       color: @basic-white;
       text-transform: uppercase;
       background-color: @basic-pink;
+
+      @media (min-width: @tablet-width) {
+        top: 57px;
+        right: @tablet-side-padding;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 54px;
+        right: @desktop-side-padding;
+      }
     }
   }
 }
 
-/* .card__image {
-  width: 100%;
+.card__image {
   height: 100%;
-  object-fit: contain;
-} */
+  width: 100%;
+  object-fit: cover;
+}
 
 .card__description {
   padding: 25px 17px;
+  background-color: @smoky-grey;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px 30px 31px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 31px 31px 30px 27px;
+  }
+
+  &--panorama {
+    margin: 0 @mobile-side-padding;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 @tablet-side-padding;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0 @desktop-side-padding;
+    }
+  }
 }
 
 .card__paragraph {
@@ -37,6 +90,16 @@
 
   &:last-of-type {
     margin: 0 0 13px;
+  }
+
+  &--panorama {
+    order: 3;
+
+    @media (min-width: @tablet-width) {
+      &:last-of-type {
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -56,6 +119,19 @@
   justify-content: flex-start;
   align-items: center;
   gap: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  &--panorama {
+    @media (min-width: @tablet-width) {
+      order: 2;
+      margin-left: auto;
+    }
+  }
 }
 
 .card__like-button {

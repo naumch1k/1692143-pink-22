@@ -31,8 +31,6 @@
   &--place--modal {
     width: 276px;
     min-height: 59px;
-    //margin-right: auto;
-    //margin-left: auto;
     padding: 10px;
     color: @basic-white;
     background-color: @basic-green;
@@ -63,6 +61,14 @@
     background-color: transparent;
     font-weight: 700;
     border-radius: 30px;
+
+    @media (min-width: @tablet-width) {
+      width: 260px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 183px;
+    }
 
     &[type="submit"] {
       color: @basic-pink;

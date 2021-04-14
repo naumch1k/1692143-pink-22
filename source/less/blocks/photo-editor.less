@@ -1,11 +1,42 @@
 .photo-editor__heading {
-  padding: 49px 0 52px;
+  padding-top: 49px;
+  padding-bottom: 52px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 73px;
+    padding-bottom: 78px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 67px;
+    padding-bottom: 75px;
+  }
+}
+
+.photo-editor__picture {
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    margin: auto;
+    grid-row-start: 1;
+    grid-row-end: -1;
+  }
+}
+
+.photo-editor__image {
+  width: 100%;
+  vertical-align: bottom;
 }
 
 .photo-editor__controls-buttons {
   margin: 0 auto 20px;
   display: flex;
+  justify-content: center;
   gap: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    flex-direction: column;
+  }
 }
 
 .photo-editor__buttons {
@@ -16,6 +47,20 @@
   gap: 12px;
   border-top: 1px solid rgba(@basic-blue, 0.1);
   /*уже вижу, что эта граница скорее у слайдеров должна быть. Думаю*/
+
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    justify-content: flex-end;
+    gap: 24px;
+    border-top: none;//Думаю
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+  }
 }
 
 .photo-editor__controls-button {
@@ -23,6 +68,14 @@
   border: none;
   color: rgba(@basic-blue, 0.3);
   background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    color: @basic-pink;
+
+    & > svg {
+      height: 22px;
+    }
+  }
 
   &:hover:not(.photo-editor__controls-button--active) {
     color: rgba(@basic-blue, 0.5);

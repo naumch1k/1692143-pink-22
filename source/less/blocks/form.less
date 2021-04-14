@@ -1,7 +1,6 @@
 .form {
-  background-color: @basic-white;
-
   &--place--contest {
+    background-color: @basic-white;
     display: grid;
 
     @media (min-width: @tablet-width) {
@@ -15,8 +14,21 @@
   }
 
   &--place--photo-editor {
-    padding: 20px 0;
+    padding: 20px @mobile-side-padding;
     background-color: @smoky-grey;
+
+    @media (min-width: @tablet-width) {
+      padding: 57px @tablet-side-padding 54px;
+      display: grid;
+      grid-template-columns: 12fr 11fr;
+      grid-template-rows: repeat(2, 200px);
+      gap: 45px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0 @desktop-side-padding;
+      padding: 57px 0;
+    }
   }
 }
 
@@ -79,6 +91,14 @@
       width: 100%;
       grid-column-start: 1;
       grid-column-end: -1;
+    }
+  }
+
+  &--for--controls {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-direction: row;
+      gap: 28px;
     }
   }
 }
@@ -186,6 +206,10 @@
   &--type--controls {
     padding-top: 42px;
     padding-bottom: 34px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+    }
   }
 }
 
@@ -418,10 +442,6 @@
   }
 }
 
-.form__image {
-  vertical-align: bottom;
-}
-
 // кастомные чекбоксы
 
 .form__input--type--checkbox + .form__label::before {
@@ -441,7 +461,7 @@
 }
 
 .form__input--type--checkbox:checked + .form__label::before {
-  background: @basic-white url("./../../img/tick-icon.svg") no-repeat 50% 40%;
+  background: @basic-white url("../img/tick-icon.svg") no-repeat 50% 40%;
 }
 
 .form__input--type--checkbox:hover + .form__label::before {
