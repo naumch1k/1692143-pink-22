@@ -7,17 +7,23 @@
   }
 
   &--place--header {
-    padding-bottom: 23px;
+    width: 74px;
+    height: 23px;
+    margin-left: @mobile-side-padding;
+    padding-bottom: 21px;
     color: @basic-white;
-    border-bottom: 1px solid @basic-black;
+    //border-bottom: 1px solid @basic-black;
 
     @media (min-width: @tablet-width) {
+      margin-left: @tablet-side-padding;
       padding-bottom: 42px;
     }
 
     @media (min-width: @desktop-width) {
+      width: 147px;
+      height: 40px;
+      margin-left: 0;
       padding-bottom: 0;
-      border: none;
     }
 
     &:active {

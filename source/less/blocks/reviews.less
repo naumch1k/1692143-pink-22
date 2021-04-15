@@ -1,12 +1,12 @@
 .reviews__container {
-  padding: 50px @mobile-side-padding 60px;
+  padding: 39px @mobile-side-padding 35px;
 
   @media (min-width: @tablet-width) {
-    padding: 50px @tablet-side-padding 60px;
+    padding: 41px @tablet-side-padding 15px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 193px @desktop-side-padding 142px;
+    padding: 184px @desktop-side-padding 78px;
   }
 }
 
@@ -22,10 +22,12 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  row-gap: 31px;
+  row-gap: 12px;
 
   @media (min-width: @tablet-width) {
-    row-gap: 51px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
   }
 }
 
@@ -55,6 +57,7 @@
   display: none;
 
   @media (min-width: @tablet-width) {
+    line-height: 24px;
     display: block;
   }
 
@@ -70,6 +73,10 @@
     max-width: 670px;
     font-size: 18px;
     order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 690px;
   }
 }
 

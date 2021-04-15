@@ -1,17 +1,27 @@
 .header {
   width: 100%;
-  padding: 23px 0 0;
-  background-color: @basic-blue;
-  /* background-color: rgba(@basic-black, 0.3); */
-  /* position: absolute; */
-  position: relative;
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding: 22px 0 0;
+  background-color: rgba(@basic-black, 0.3);
+  position: absolute;
+
+  &--opened {
+    background-color: @basic-blue;
+    position: relative;
+
+    @media (min-width: @desktop-width) {
+      background-color: rgba(@basic-black, 0.3);
+      position: absolute;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    padding: 27px 0 0;
+    padding: 44px 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 27px 0;
+    padding: 27px @desktop-side-padding 43px;
   }
 }
 
@@ -22,5 +32,6 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 }

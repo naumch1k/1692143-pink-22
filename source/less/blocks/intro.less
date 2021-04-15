@@ -1,6 +1,7 @@
 .intro {
   color: @basic-white;
   background: @darker-blue url("../img/back-mobile.jpg") no-repeat;
+  background-size: 100% auto;
 }
 
 .intro__container {
@@ -18,17 +19,17 @@
   }
 
   &--place--index {
-    padding-top: 95px;
-    padding-bottom: 38px;
+    padding-top: 90px;
+    padding-bottom: 31px;
 
     @media (min-width: @tablet-width) {
-      padding-top: 212px;
-      padding-bottom: 119px;
+      padding-top: 205px;
+      padding-bottom: 114px;
     }
 
     @media (min-width: @desktop-width) {
-      padding-top: 224px;
-      padding-bottom: 130px;
+      padding-top: 209px;
+      padding-bottom: 125px;
     }
   }
 
@@ -95,16 +96,18 @@
   &--place--index {
     max-width: 280px;
     margin-right: auto;
-    margin-bottom: 340px;
+    margin-bottom: 344px;
     margin-left: auto;
     line-height: 1.2;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 39px;
+      max-width: 220px;
+      margin-bottom: 30px;
     }
 
     @media (min-width: @desktop-width) {
-      margin-bottom: 51px;
+      max-width: 240px;
+      margin-bottom: 36px;
       font-size: 50px;
       line-height: 68px;
     }
@@ -121,7 +124,7 @@
 
 .intro__list {
   list-style: none;
-  margin: 0 0 28px;
+  margin: 0 0 14px;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -129,11 +132,11 @@
   column-gap: 35px;
 
   @media (min-width: @tablet-width) {
-    margin: 0 0 38px;
+    margin: 0 0 25px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 58px;
+    margin: 0 0 46px;
   }
 }
 

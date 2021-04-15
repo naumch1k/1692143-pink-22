@@ -1,19 +1,143 @@
 .navigation {
   background-color: @basic-blue;
   color: @basic-white;
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+  }
 }
 
+// Бургер
+
 .navigation__toggle {
+  padding: 0;
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  outline: none;
   position: absolute;
-  top: 16px;
-  right: 14px;
-  width: 35px;
-  height: 34px;
+  cursor: pointer;
 
   @media (min-width: @desktop-width) {
     display: none;
   }
 }
+
+.navigation--closed {
+  & .navigation__item {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  & .navigation__toggle {
+    width: 50px;
+    height: 24px;
+    top: 21px;
+    right: 20px;
+    color: @basic-white;
+    transition: @color-ease;
+
+    &:hover {
+      color: @basic-pink;
+    }
+
+    &:active {
+      color: rgba(@basic-pink, 0.3);
+    }
+
+    @media (min-width: @tablet-width) {
+      top: 44px;
+    }
+
+    // бургер вставила svg, я не смогу скруглить тени?
+    /* &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 4px;
+      background-color: @basic-white;
+      box-shadow: 0 10px 0 0 @basic-white, 0 20px 0 0 @basic-white;
+      transition: box-shadow 0.5s, background-color 0.5s ease;
+    }
+
+    &:hover::before {
+      background-color: @basic-pink;
+      box-shadow: 0 10px 0 0 @basic-pink, 0 20px 0 0 @basic-pink;
+    }
+
+    &:active::before {
+      background-color: rgba(@basic-pink, 0.5);
+      box-shadow: 0 10px 0 0 rgba(@basic-pink, 0.5), 0 20px 0 0 rgba(@basic-pink, 0.5);
+    } */
+  }
+}
+
+.navigation--opened {
+  & .navigation__list {
+    border-top: 1px solid @basic-black;
+
+    @media (min-width: @desktop-width) {
+      border-top: none;
+    }
+  }
+
+  & .navigation__toggle {
+    width: 23px;
+    height: 23px;
+    top: 24px;
+    right: 23px;
+
+    @media (min-width: @tablet-width) {
+      top: 44px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 30px;
+      height: 3px;
+      background-color: @basic-white;
+      transition: background-color 0.5s ease;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: @basic-pink;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: rgba(@basic-pink, 0.5);
+    }
+  }
+}
+
+/*
+.navigation--nojs .navigation__item {
+  display: block;
+} */
+
+.navigation--nojs .navigation__toggle {
+  display: none;
+}
+
+// Конец бургер
 
 .navigation__list {
   margin: 0;
@@ -24,12 +148,14 @@
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    margin: auto 0;
+    flex-wrap: wrap;
     gap: 79px;
   }
 }
 
 .navigation__item {
-  padding: 18px 0;
+  padding: 15px 0;
   border-top: 1px solid rgba(@basic-white, 0.15);
   border-bottom: 1px solid @basic-black;
   text-align: center;
@@ -39,7 +165,17 @@
     border: none;
 
     &--current {
-      border-bottom: 2px solid @basic-white;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -19px;
+        left: 0;
+        height: 2px;
+        background-color: @basic-white;
+      }
     }
   }
 }
@@ -54,11 +190,11 @@
   text-decoration: none;
   transition: @color-ease;
 
-  &:hover {
+  &[href]:hover {
     color: @basic-pink;
   }
 
-  &:active {
+  &[href]:active {
     color: rgba(@basic-pink, 0.3);
   }
 
@@ -68,11 +204,7 @@
     font-weight: 400;
     text-transform: none;
 
-    &:hover {
-      color: @basic-pink;
-    }
-
-    &:active {
+    &[href]:active {
       color: rgba(@basic-white, 0.3);
     }
   }
