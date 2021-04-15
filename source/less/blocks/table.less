@@ -15,17 +15,25 @@
   width: 25%;
 
   @media (max-width: @mobile-width-only) {
-    min-width: calc(100vw - (20px * 2));
+    min-width: calc(100vw - 42px);
   }
 
   &:not(:first-of-type) {
-    padding: 19px 20px 35px;
+    padding: 12px 23px 26px;
     background-color: @basic-blue;
     color: @basic-white;
     border-right: 2px solid @ligth-grey;
     font-size: 18px;
     font-weight: 200;
     text-transform: uppercase;
+
+    @media (min-width: @tablet-width) {
+      padding: 12px 23px 7px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 16px 23px 23px;
+    }
   }
 
   &:first-of-type {
@@ -46,6 +54,42 @@
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
   }
+
+  &--hit {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "Хит";
+      width: 110px;
+      height: 23px;
+      font-size: 14px;
+      line-height: 1.5;
+      position: absolute;
+      top: 20px;
+      left: -31px;
+      transform: rotate(-45deg);
+      text-align: center;
+      text-transform: uppercase;
+      background-color: @basic-pink;
+      color: @basic-white;
+
+      @media (min-width: @tablet-width) {
+        width: 86px;
+        height: 19px;
+        line-height: 1.3;
+        top: 14px;
+        left: -22px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 110px;
+        height: 23px;
+        line-height: 1.5;
+        left: -27px;
+      }
+    }
+  }
 }
 
 .table__plan-name {
@@ -58,17 +102,30 @@
   }
 }
 
+.table__plan-price {
+  line-height: 1.3;
+  vertical-align: top;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
+}
+
 .table__cell {
-  padding: 20px;
+  padding: 14px 17px 15px 20px;
   background-color: @basic-white;
   border: 2px solid @ligth-grey;
 
+  &:not(:first-of-type) {
+    border-top: none;
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 10px;
+    padding: 8px 15px 2px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 15px;
+    padding: 11px 15px 13px 21px;
   }
 
   &--type--feature {
@@ -78,7 +135,7 @@
       display: table-cell;
     }
 
-    @media (min-width: @desktop-width) {/*для всей табл? */
+    @media (min-width: @desktop-width) {
       font-size: 18px;
     }
   }
@@ -101,5 +158,6 @@
 .table__mark {
   @media (max-width: @mobile-width-only) {
     float: right;
+    margin: auto 0;
   }
 }

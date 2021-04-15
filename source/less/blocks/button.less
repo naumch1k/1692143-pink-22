@@ -1,6 +1,7 @@
 .button {
   font-size: 18px;
   line-height: 1;
+  font-weight: 700;
   box-sizing: border-box;
   transition: border 0.5s, background-color 0.5s, @color-ease;
 
@@ -16,6 +17,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (min-width: @tablet-width) {
+      width: 300px;
+    }
+
+    @media (min-width: @desktop-width) {
+      font-size: 21px;
+    }
+
 
     &:hover {
       color: @basic-pink;
