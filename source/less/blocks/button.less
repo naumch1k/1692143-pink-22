@@ -39,8 +39,8 @@
 
   &--place--form,
   &--place--modal {
-    width: 276px;
-    min-height: 59px;
+    width: 280px;
+    min-height: 63px;
     padding: 10px;
     color: @basic-white;
     background-color: @basic-green;
@@ -48,7 +48,11 @@
     font-weight: 700;
     text-transform: uppercase;
     border: 2px solid @basic-green;
-    border-radius: 5px;
+    border-radius: 3px;
+
+    @media (min-width: @tablet-width) {
+      width: 300px;
+    }
 
     &:hover {
       background-color: @darker-green;
