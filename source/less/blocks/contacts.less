@@ -26,6 +26,10 @@
   }
 }
 
+.contacts__heading-paragraph {
+  margin: 0;
+}
+
 .contacts__list {
   list-style: none;
   margin: 0;
@@ -36,6 +40,7 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
+    padding: 0 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -49,22 +54,27 @@
 }
 
 .contacts__item {
-  max-width: 280px;
+  width: calc(100% - (@mobile-side-padding * 2));
+
+  @media (min-width: @tablet-width) {
+    width: 245px;
+  }
+
 
   &--type--tel {
     margin-bottom: 20px;
 
     @media (min-width: @tablet-width) {
-      margin: 0 0 0 18px;//хм, может ширину им задать?
+      margin: 0;
     }
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: 885px) {
       order: 1;
     }
   }
 
   &--type--address {
-    @media (min-width: @desktop-width) {
+    @media (min-width: 885px) {
       order: 2;
     }
   }
@@ -76,7 +86,7 @@
       margin: 0;
     }
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: 885px) {
       order: 3;
     }
   }

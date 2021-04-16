@@ -15,7 +15,6 @@
 @tablet-width: 660px;
 @desktop-width: 1200px;
 @mobile-width-only: 659px;
-@tablet-width-only: 1199px;//???
 
 // Section paddings
 
@@ -29,4 +28,37 @@
 
 .modal-shadow() {
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+// Masks
+
+.half-triangle-mask() {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 123px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 123'%3E%3Cpolygon points='0,0 1200,0 0,95' fill='white'/%3E%3C/svg%3E") no-repeat;
+    z-index: 1;
+    background-size: contain;
+    background-position: top center;
+  }
+}
+
+.triangle-mask() {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 123px;
+    position: absolute;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1439 123'%3E%3Cpolygon points='0,0 1439,0 720,123' fill='white'/%3E%3C/svg%3E") no-repeat;
+    background-size: contain;
+    background-position: top center;
+  }
 }
