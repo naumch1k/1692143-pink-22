@@ -1,41 +1,46 @@
 .photo-editor__heading {
-  padding-top: 49px;
-  padding-bottom: 52px;
+  padding-top: 40px;
+  padding-bottom: 42px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 73px;
-    padding-bottom: 78px;
+    padding-top: 64px;
+    padding-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 67px;
-    padding-bottom: 75px;
+    padding-top: 58px;
+    padding-bottom: 67px;
   }
 }
 
 .photo-editor__picture {
+  padding-right: @mobile-side-padding;
+  padding-left: @mobile-side-padding;
+
   @media (min-width: @tablet-width) {
     width: 300px;
-    margin: auto;
+    height: 400px;
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 0;
     grid-row-start: 1;
     grid-row-end: -1;
   }
 }
 
 .photo-editor__image {
+  object-fit: cover;
   width: 100%;
-  vertical-align: bottom;
 }
 
 .photo-editor__controls-buttons {
-  margin: 0 auto 20px;
+  margin: 0 12px 16px 0;
   display: flex;
   justify-content: center;
   gap: 35px;
 
   @media (min-width: @tablet-width) {
-    margin: 0;
-    flex-direction: column;
+    display: none;
   }
 }
 
@@ -45,20 +50,19 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  border-top: 1px solid rgba(@basic-blue, 0.1);
-  /*уже вижу, что эта граница скорее у слайдеров должна быть. Думаю*/
 
 
   @media (min-width: @tablet-width) {
     padding: 0;
     justify-content: flex-end;
+    align-items: flex-start;
     gap: 24px;
-    border-top: none;//Думаю
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: flex-end;
     gap: 0;
   }
 }
@@ -72,7 +76,7 @@
   @media (min-width: @tablet-width) {
     color: @basic-pink;
 
-    & > svg {
+    & > svg {//класс
       height: 22px;
     }
   }
