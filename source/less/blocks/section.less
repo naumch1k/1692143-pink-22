@@ -1,4 +1,4 @@
-.section-heading {
+.section__heading {
   margin: 0;
   padding-right: @mobile-side-padding;
   padding-left: @mobile-side-padding;
@@ -14,6 +14,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    .content-centered();
     padding-right: @desktop-side-padding;
     padding-left: @desktop-side-padding;
   }
@@ -42,4 +43,8 @@
       padding-left: calc(@tablet-side-padding + 25px);
     }
   }
+}
+
+.section__container {
+  .content-centered();
 }
