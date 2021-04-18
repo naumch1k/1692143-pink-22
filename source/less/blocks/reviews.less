@@ -1,12 +1,15 @@
 .reviews__container {
   padding: 39px @mobile-side-padding 35px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 41px @tablet-side-padding 15px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 184px @desktop-side-padding 78px;
+    padding: 184px @desktop-side-padding 80px;
+    background: url("../img/icon-quotes.svg") no-repeat;
+    background-position: center top 72px;
   }
 }
 
@@ -84,6 +87,32 @@
   display: none;
 
   @media (min-width: @desktop-width) {
-    display: inline-block;
+    display: block;
+    width: 22px;
+    height: 41px;
+    padding: 0;
+    color: rgba(@basic-blue, 0.3);
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 213px;
+    cursor: pointer;
+    transition: @color-ease;
+
+    &:hover {
+      color: rgba(@basic-blue, 0.6);
+    }
+
+    &:active {
+      color: rgba(@basic-blue, 0.1);
+    }
+
+    &--dir--prev {
+      left: @desktop-side-padding;
+    }
+
+    &--dir--next {
+      right: @desktop-side-padding;
+    }
   }
 }
