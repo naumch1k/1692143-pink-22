@@ -1,8 +1,6 @@
 .header {
   width: 100%;
-  max-width: 1200px;
-  box-sizing: border-box;
-  padding: 22px 0 0;
+  padding-top: 22px;
   background-color: rgba(@basic-black, 0.3);
   position: absolute;
 
@@ -17,19 +15,23 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 44px 0 0;
+    padding-top: 44px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 27px @desktop-side-padding 43px;
+    padding-top: 27px;
+    padding-bottom: 43px;
   }
 }
 
 .header__container {
+  .content-centered();
   display: flex;
   flex-direction: column;
 
   @media (min-width: @desktop-width) {
+    padding-right: @desktop-side-padding;
+    padding-left: @desktop-side-padding;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

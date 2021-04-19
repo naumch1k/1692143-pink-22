@@ -14,6 +14,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    .content-centered();
     padding-right: @desktop-side-padding;
     padding-left: @desktop-side-padding;
   }
@@ -49,17 +50,17 @@
   }
 
   &--place--photo {
-    padding-top: 102px;
-    padding-bottom: 84px;
+    padding-top: 94px;
+    padding-bottom: 77px;
 
     @media (min-width: @tablet-width) {
-      padding-top: 191px;
-      padding-bottom: 143px;
+      padding-top: 177px;
+      padding-bottom: 127px;
     }
 
     @media (min-width: @desktop-width) {
-      padding-top: 184px;
-      padding-bottom: 104px;
+      padding-top: 168px;
+      padding-bottom: 89px;
     }
   }
 }
@@ -118,6 +119,13 @@
     @media (min-width: @tablet-width) {
       font-size: 50px;
       line-height: 68px;
+    }
+  }
+
+  &--place--photo {
+    @media (min-width: @desktop-width) {
+      max-width: 640px;
+      margin: 0 auto;
     }
   }
 }
