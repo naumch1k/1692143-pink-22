@@ -63,13 +63,13 @@
       </div>
     </header>
     <main class="page__content">
-      <section class="intro intro--place--form">
-        <div class="intro__container intro__container--place--form">
+      <section class="intro intro--place--form section">
+        <div class="intro__container intro__container--place--form section__container">
           <h1 class="intro__slogan intro__slogan--place--form">Конкурс на&nbsp;самое безбашенное путешествие с&nbsp;Пинк</h1>
         </div>
       </section>
       <section class="contest section">
-        <div class="contest__container">
+        <div class="contest__container section__container">
           <h2 class="visually-hidden">Форма для участия конкурсе</h2>
           <p class="contest__heading section__heading">Поделитесь своей историей и&nbsp;получите шанс выиграть ценный приз&nbsp;&mdash; 1000 миль на&nbsp;вашу бонусную карту!<span class="contest__span"> Пожалуйста, заполните форму ниже:</span></p>
           <form class="form form--place--contest" method="post" action="https://echo.htmlacademy.ru">
@@ -123,7 +123,7 @@
               <legend class="form__fielset-title form__fielset-title--for--contact-info">Контактная информация</legend>
               <ul class="form__list form__container form__container--for--contact-info">
                 <li class="form__item form__item--type--email"><!--названия-->
-                  <label class="form__label form__label--size--s form__label--for--type-email" for="phone">Номер телефона</label>
+                  <label class="form__label form__label--size--s form__label--for--type-phone" for="phone">Номер телефона</label>
                   <input class="form__input form__input--type--text" id="phone" name="phone" type="tel" placeholder="Номер, пожалуйста">
                 </li>
                 <li class="form__item form__item--type--email">
@@ -160,24 +160,6 @@
               <p class="form__note"><sup class="form__sup">*</sup> &mdash; обязательные <span class="form__span">для заполнения</span> поля</p>
             </div>
           </form>
-          <div class="modal modal--type--success">
-            <div class="modal__text-block">
-              <h3 class="modal__title">Ваша заявка отправлена</h3>
-              <p class="modal__description">Спасибо за&nbsp;ваше участие, ваша заявка уже поступила к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;рассмотрим ее&nbsp;и&nbsp;оповестим вас.</p>
-            </div>
-            <div class="modal__button-block">
-              <button class="button button--place--modal" type="button">Закрыть окно</button>
-            </div>
-          </div>
-          <div class="modal modal--type--error">
-            <div class="modal__text-block">
-              <h3 class="modal__title">Что-то пошло не так!</h3>
-              <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли их&nbsp;заполнить</p>
-            </div>
-            <div class="modal__button-block">
-              <button class="button button--place--modal" type="button">Ок</button>
-            </div>
-          </div>
         </div>
       </section>
     </main>
@@ -185,7 +167,7 @@
       <div class="footer__container">
         <div class="footer__columns">
           <div class="footer__column footer__column--content--logo">
-            <a class="footer__logo-link">
+            <a class="footer__logo-link" href="index.html">
               <span class="visually-hidden">Логотип приложения Pink</span>
               <svg class="footer__logo--screen--mobile" aria-hidden="true" focusable="false" width="145" height="40" viewBox="0 0 145 40" fill="currentColor">
                 <path d="M71.005 18.5486C71.0049 18.2125 71.1358 17.8898 71.3697 17.6494C71.6037 17.409 71.922 17.2701 72.2568 17.2623H79.39C84.4469 17.2623 87.7751 19.9645 87.7751 24.3918V24.4516C87.7751 29.2977 83.7415 31.8105 78.9727 31.8105H73.5384V38.611C73.5539 38.7874 73.5328 38.9651 73.4762 39.1329C73.4196 39.3006 73.3289 39.4547 73.2097 39.5854C73.0906 39.716 72.9457 39.8204 72.7842 39.8918C72.6227 39.9631 72.4481 40 72.2717 40C72.0952 40 71.9207 39.9631 71.7592 39.8918C71.5977 39.8204 71.4527 39.716 71.3336 39.5854C71.2145 39.4547 71.1237 39.3006 71.0671 39.1329C71.0106 38.9651 70.9894 38.7874 71.005 38.611V18.5486ZM79.0721 29.5171C82.7778 29.5171 85.2119 27.5228 85.2119 24.5314V24.4716C85.2119 21.2608 82.8175 19.5956 79.2509 19.5956H73.588V29.4772L79.0721 29.5171Z"/>
@@ -248,6 +230,29 @@
         </div>
       </div>
     </footer>
+    <div class="modal modal--type--success">
+      <div class="modal__container">
+        <div class="modal__text-block modal__text-block--place--success">
+          <h3 class="modal__title">Ваша заявка отправлена</h3>
+          <p class="modal__description">Спасибо за&nbsp;ваше участие, ваша заявка уже поступила к&nbsp;нам. В&nbsp;ближайшее время мы&nbsp;рассмотрим ее&nbsp;и&nbsp;оповестим вас.</p>
+        </div>
+        <div class="modal__button-block modal__button-block--place--success">
+          <button class="button button--place--modal" type="button">Закрыть окно</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--type--error">
+      <div class="modal__container">
+        <div class="modal__text-block modal__text-block--place--error">
+          <h3 class="modal__title">Что-то пошло не так!</h3>
+          <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы&nbsp;забыли их&nbsp;заполнить</p>
+        </div>
+        <div class="modal__button-block modal__button-block--place--error">
+          <button class="button button--place--modal" type="button">Ок</button>
+        </div>
+      </div>
+    </div>
   </div>
   <script>
     const header = document.querySelector('.header');
