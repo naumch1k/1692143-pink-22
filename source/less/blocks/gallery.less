@@ -9,7 +9,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 640px;
+    max-width: 730px;
     margin: 0 auto;
     padding-bottom: 70px;
   }
@@ -17,19 +17,21 @@
 
 .gallery__list {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0 @mobile-side-padding;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, 280px);
+  justify-content: center;
   gap: 20px;
 
   @media (min-width: @tablet-width) {
     padding: 0 @tablet-side-padding;
+    grid-template-columns: repeat(auto-fill, 300px);
     grid-auto-rows: minmax(455px, auto);
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 @desktop-side-padding;
+    .content-centered();
     padding: 0;
     grid-auto-rows: minmax(555px, auto);
     gap: 54px 20px;
