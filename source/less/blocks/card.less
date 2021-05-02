@@ -80,7 +80,9 @@
     }
 
     @media (min-width: @desktop-width) {
-      margin: 0 @desktop-side-padding;
+      max-width: calc(@content-max-width - 2 * @desktop-side-padding);
+      margin: 0 auto;
+      box-sizing: border-box;
     }
   }
 }
