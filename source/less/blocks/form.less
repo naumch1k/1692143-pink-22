@@ -302,11 +302,44 @@
     font-size: 18px;
   }
 
+  &--for--type-phone,
   &--for--type-email {
     margin-left: 23px;
 
     @media (min-width: @tablet-width) {
       margin-left: 17px;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 60px;
+        height: 60px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        background-color: @ligth-grey;
+        background-position: center;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -71px;
+        right: 2px;
+      }
+    }
+  }
+
+  &--for--type-phone {
+    @media (min-width: @tablet-width) {
+      &::before {
+        background-image: url("../img/icon-phone.svg");
+      }
+    }
+  }
+
+  &--for--type-email {
+    @media (min-width: @tablet-width) {
+      &::before {
+        background-image: url("../img/icon-email.svg");
+      }
     }
   }
 
