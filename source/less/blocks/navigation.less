@@ -145,7 +145,6 @@
     flex-direction: row;
     margin: auto 0;
     flex-wrap: wrap;
-    gap: 79px;
   }
 }
 
@@ -158,6 +157,10 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     border: none;
+
+    &:not(:last-child) {
+      margin-right: 79px;
+    }
 
     &--current {
       position: relative;

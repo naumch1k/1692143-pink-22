@@ -38,17 +38,7 @@
   display: flex;
   flex-direction: column;
 
-  &--for--info {
-    gap: 16px;
-
-    @media (min-width: @tablet-width) {
-      gap: 51px;
-    }
-  }
-
   &--for--achievments {
-    gap: 52px;
-
     @media (min-width: @desktop-width) {
       display: grid;
       grid-template-columns: 260px 239px 1fr;
@@ -57,25 +47,13 @@
   }
 
   &--for--contact-info {
-    gap: 16px;
-
-    @media (min-width: @tablet-width) {
-      gap: 29px;
-    }
-
     @media (min-width: @desktop-width) {
       flex-direction: row;
-      gap: 74px;
     }
-  }
-
-  &--for--app-type {
-    gap: 45px;
   }
 
   &--for--button {
     align-items: center;
-    gap: 29px;
     padding: 0 0 16px;
 
     @media (min-width: @tablet-width) {
@@ -150,7 +128,7 @@
 
     @media (min-width: @tablet-width) {
       padding-top: 37px;
-      padding-bottom: 27px;
+      padding-bottom: 18px;
       grid-row-start: 3;
       grid-row-end: 4;
     }
@@ -207,7 +185,7 @@
   }
 
   &--type--controls {
-    padding-top: 42px;
+    padding-top: 35px;
     padding-bottom: 16px;
     border-bottom: 1px solid rgba(@basic-blue, 0.1);
 
@@ -238,6 +216,7 @@
 
   @media (min-width: @tablet-width) {
     width: auto;
+    margin: 0 auto;
     position: static;
     transform: none;
   }
@@ -304,10 +283,10 @@
 
   &--for--phone,
   &--for--email {
-    margin-left: 23px;
+    margin: 0 0 5px 23px;
 
     @media (min-width: @tablet-width) {
-      margin-left: 17px;
+      margin: 9px 0 9px 17px;
       position: relative;
 
       &::before {
@@ -322,8 +301,12 @@
         background-repeat: no-repeat;
         position: absolute;
         top: -71px;
-        right: 2px;
+        right: 0;
       }
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 9px 0 0 17px;
     }
   }
 
@@ -357,7 +340,14 @@
   &--type--text {
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
+
+    &:not(:last-child) {
+      margin: 0 0 16px;
+
+      @media (min-width: @tablet-width) {
+        margin: 0 0 51px;
+      }
+    }
 
     @media (min-width: @tablet-width) {
       flex-direction: row;
@@ -365,15 +355,14 @@
     }
   }
 
+  &--type--phone,
   &--type--email {
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
 
 
     @media (min-width: @tablet-width) {
       flex-direction: column-reverse;
-      row-gap: 9px;
     }
 
     @media (min-width: @desktop-width) {
@@ -381,12 +370,36 @@
     }
   }
 
+  &--type--phone {
+    margin: 0 0 16px;
+
+    @media (min-width: @tablet-width) {
+      margin: 0 0 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0 74px 0 0;
+    }
+  }
+
   &--type--checkbox {
     position: relative;
+
+    &:not(:last-child) {
+      margin: 0 0 52px;
+
+      @media (min-width: @desktop-width) {
+        margin: 0;
+      }
+    }
   }
 
   &--type--radio {
     position: relative;
+
+    &:not(:last-child) {
+      margin: 0 0 45px;
+    }
   }
 
   &--for--chucky {
@@ -400,6 +413,17 @@
     grid-column-end: 4;
     grid-row-start: 1;
   }
+}
+
+// Firefox 18+
+input[type="text"]::-moz-placeholder,
+input[type="text"]:-moz-placeholder,
+input[type="tel"]::-moz-placeholder,
+input[type="tel"]:-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="email"]:-moz-placeholder {
+  color: @basic-blue;
+  line-height: 0;
 }
 
 .form__input {
@@ -443,6 +467,7 @@
 
     @media (min-width: @desktop-width) {
       min-height: 128px;
+      padding: 15px 10px;
     }
 
     &::placeholder {
@@ -458,6 +483,14 @@
 
   &--type--file {
     display: none;
+  }
+}
+
+.form__button {
+  margin: 0 0 29px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
   }
 }
 
