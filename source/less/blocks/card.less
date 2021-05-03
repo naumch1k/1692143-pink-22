@@ -120,7 +120,6 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 18px;
 
   @media (min-width: @tablet-width) {
     margin-top: auto;
@@ -138,12 +137,21 @@
 
 .card__like-button {
   padding: 0;
+  background-color: transparent;
   border: none;
 }
 
 .card__like-counter {
-  margin: 0;
+  margin: 0 0 0 18px;
   font-size: 12px;
   text-transform: uppercase;
   color: @basic-pink;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+
+    &--panorama {
+      margin: 0 18px 0 0;
+    }
+  }
 }

@@ -25,18 +25,23 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    row-gap: 36px;
   }
 }
 
 .reviews__author {
+  margin: 0 0 12px;
+
   @media (min-width: @tablet-width) {
+    margin: 0 0 9px;
     order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
 
@@ -74,6 +79,7 @@
 
   @media (min-width: @tablet-width) {
     max-width: 670px;
+    margin: 0 auto 36px;
     font-size: 18px;
     order: 1;
   }
