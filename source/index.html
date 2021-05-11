@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -389,31 +389,7 @@
       </div>
     </footer>
   </div>
-  <script>
-    const header = document.querySelector('.header');
-    const navigation = document.querySelector('.navigation');
-    const navigationToggle = document.querySelector('.navigation__toggle');
-
-    navigation.classList.remove('navigation--nojs');
-
-    const closeNavigation = () => {
-      navigation.classList.add('navigation--closed');
-      navigation.classList.remove('navigation--opened');
-      header.classList.remove('header--opened');
-    }
-
-    const openNavigation = () => {
-      navigation.classList.remove('navigation--closed');
-      navigation.classList.add('navigation--opened');
-      header.classList.add('header--opened');
-    }
-
-    const toggleNavigationMenu = () => {
-      return navigation.classList.contains('navigation--closed') ? openNavigation() : closeNavigation()
-    }
-
-    navigationToggle.addEventListener('click', toggleNavigationMenu);
-  </script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
