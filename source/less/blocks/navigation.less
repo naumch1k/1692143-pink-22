@@ -128,8 +128,12 @@
   }
 }
 
-.navigation--nojs .navigation__toggle {
+.header--nojs .navigation__toggle {
   display: none;
+}
+
+.header--nojs .navigation__item {
+  display: block;
 }
 
 // Конец бургер
@@ -142,9 +146,10 @@
   flex-direction: column;
 
   @media (min-width: @desktop-width) {
-    flex-direction: row;
     margin: auto 0;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    gap: 20px 79px;
   }
 }
 
@@ -157,24 +162,6 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     border: none;
-
-    &:not(:last-child) {
-      margin-right: 79px;
-    }
-
-    &--current {
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: -9px;
-        left: 0;
-        height: 2px;
-        background-color: @basic-white;
-      }
-    }
   }
 }
 
@@ -201,6 +188,20 @@
     line-height: 18px;
     font-weight: 400;
     text-transform: none;
+
+    &--current {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -11px;
+        left: 0;
+        height: 2px;
+        background-color: @basic-white;
+      }
+    }
 
     &[href]:active {
       color: rgba(@basic-white, 0.3);
