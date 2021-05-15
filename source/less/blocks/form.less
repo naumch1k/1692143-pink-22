@@ -49,6 +49,7 @@
   &--for--contact-info {
     @media (min-width: @desktop-width) {
       flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 
@@ -327,11 +328,18 @@
   }
 
   &--for--text {
+    margin-bottom: 5px;
     margin-left: 23px;
 
     @media (min-width: @tablet-width) {
-      margin-left: 0;
       margin-right: 19px;
+      margin-left: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 19px;
+      margin-bottom: 0;
+      margin-left: 0;
     }
   }
 }
