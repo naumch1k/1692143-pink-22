@@ -4,12 +4,12 @@
     display: grid;
 
     @media (min-width: @tablet-width) {
-      gap: 57px;
+      gap: 52px;
     }
 
     @media (min-width: @desktop-width) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 58px 74px;
+      gap: 51px 74px;
     }
   }
 
@@ -59,14 +59,14 @@
 
     @media (min-width: @tablet-width) {
       width: 100%;
-      margin: 9px auto 0;
+      margin: 14px auto 0;
       padding: 0;
       flex-direction: row;
       justify-content: space-between;
     }
 
     @media (min-width: @desktop-width) {
-      margin: 7px auto 0;
+      margin: 13px auto 0;
       grid-column-start: 1;
       grid-column-end: -1;
     }
@@ -111,12 +111,12 @@
 
     @media (min-width: @tablet-width) {
       background-color: @basic-white;
-      padding-top: 49px;
+      padding-top: 42px;
       padding-bottom: 53px;
     }
 
     @media (min-width: @desktop-width) {
-      padding-top: 46px;
+      padding-top: 42px;
       padding-bottom: 60px;
       grid-column-start: 1;
       grid-column-end: -1;
@@ -128,14 +128,14 @@
     padding-bottom: 41px;
 
     @media (min-width: @tablet-width) {
-      padding-top: 37px;
+      padding-top: 29px;
       padding-bottom: 18px;
       grid-row-start: 3;
       grid-row-end: 4;
     }
 
     @media (min-width: @desktop-width) {
-      padding-top: 34px;
+      padding-top: 27px;
       padding-bottom: 13px;
       grid-row-start: 2;
       grid-row-end: 3;
@@ -151,9 +151,8 @@
 
     @media (min-width: @tablet-width) {
       background-color: @basic-white;
-      padding-top: 48px;
+      padding-top: 42px;
       padding-bottom: 58px;
-
       grid-row-start: 2;
       grid-row-end: 3;
     }
@@ -173,12 +172,12 @@
     padding-bottom: 52px;
 
     @media (min-width: @tablet-width) {
-      padding-top: 38px;
+      padding-top: 31px;
       padding-bottom: 47px;
     }
 
     @media (min-width: @desktop-width) {
-      padding-top: 34px;
+      padding-top: 29px;
       padding-bottom: 43px;
       grid-column-start: 1;
       grid-column-end: -1;
@@ -218,6 +217,7 @@
   @media (min-width: @tablet-width) {
     width: auto;
     margin: 0 auto;
+    line-height: 30px;
     position: static;
     transform: none;
   }
@@ -251,7 +251,7 @@
       padding: 0;
       position: absolute;
       background-color: @basic-white;
-      top: -9px;
+      top: -16px;
       left: 29px;
     }
   }
@@ -302,7 +302,7 @@
         background-repeat: no-repeat;
         position: absolute;
         top: -71px;
-        right: 0;
+        right: 2px;
       }
     }
 
@@ -547,7 +547,8 @@ input[type="email"]:-moz-placeholder {
   background: @basic-white url("../img/icon-tick.svg") no-repeat 50% 45%;
 }
 
-.form__input--type--checkbox:hover + .form__label::before {
+.form__input--type--checkbox:hover + .form__label::before,
+.form__input--type--checkbox:focus + .form__label::before {
   border: 2px solid @basic-blue;
 }
 
@@ -601,7 +602,8 @@ input[type="email"]:-moz-placeholder {
   }
 }
 
-.form__input--type--radio:hover + .form__label::before {
+.form__input--type--radio:hover + .form__label::before,
+.form__input--type--radio:focus + .form__label::before {
   border: 2px solid @basic-blue;
 }
 

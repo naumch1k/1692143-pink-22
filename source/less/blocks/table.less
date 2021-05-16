@@ -32,7 +32,8 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding: 16px 23px 23px;
+      box-sizing: content-box;
+      padding: 16px 17px 21px 21px;
     }
   }
 
@@ -86,6 +87,7 @@
         width: 110px;
         height: 23px;
         line-height: 1.5;
+        top: 19px;
         left: -27px;
       }
     }
@@ -117,7 +119,7 @@
   border: 2px solid @ligth-grey;
 
   &:not(:first-of-type) {
-    border-top: none;
+    border-top: 1px solid transparent;
   }
 
   @media (min-width: @tablet-width) {
@@ -125,7 +127,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 11px 15px 13px 21px;
+    padding: 12px 15px 13px 21px;
   }
 
   &--type--feature {
