@@ -1,6 +1,6 @@
 # Учебный проект: "PINK"
 
-*Read this in other languages:* [EN]() 
+*Read this in other languages:* [EN](https://github.com/naumch1k/pink/blob/master/Readme.md) 
 
 [GitHub Pages Link](https://naumch1k.github.io/pink/index.html)
 
